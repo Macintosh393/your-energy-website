@@ -1,15 +1,45 @@
 <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="footer-links">
+      <div class="logo">
+        <svg class="footer-logo-icon" width="132" height="14">
+          <use href="{=$icon-path}"></use>
+        </svg>
+      </div>
+      <!-- <load src="./partials/icons.html" /> -->
+    </div>
+
+    <article class="footer-main-content">
+      <h2 class="footer-title">
+        Transforming your body shape with us
+      </h2>
+      <div class="footer-subscription-form">
+        <h3>Subscribe and learn about new exercises!</h3>
+        <form class="subscription-form">
+          <input
+            type="email"
+            class="subscription-input"
+            placeholder="Email"
+            required
+          />
+          <button type="submit" class="subscription-button">Send</button>
+      </div>  
+    </article>
+    
+
+    
+    <div class="footer-copyright-container">
+      <p class="footer-copyright">
+        Your Energy. All rights reserved.
+      </p>
+      <div class="copyright-wrapper">
+        <p class="footer-copyright">
+          Privacy Policy / Terms of Service
+        </p>
+        <p class="footer-copyright">
+          &copy; 2026
+        </p>  
+      </div>
+    </div>
   </div>
 </footer>

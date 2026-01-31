@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 2</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <load
+      src="./partials/header.html"
+      icon-path="./img/sprite.svg#logo"
+      highlight-act="active"
+    />
+
+    <section class="hero">
+      <div class="container">
+        <h1 class="page-title">Favorites</h1>
+      </div>
+    </section>
+    
+
+    <section class="motivation">
+      <div class="container">
+        <article class="motivation-quote">
+          <svg class="motivation-quote-icon" width="48" height="48">
+            <use href="img/heart-icon.svg"></use>
+          </svg>
+          <div class="motivation-quote-content">
+            <div class="motivation-quote-header">
+              <h2 class="motivation-title">Stay Motivated!</h2>
+              <svg class="quotes">
+                <use href="img/quotes-icon.svg"></use>
+              </svg>  
+            </div>
+            <blockquote class="motivation-text">
+              "The only bad workout is the one that didn't happen."
+            </blockquote>
+            <cite class="motivation-author">- Unknown</cite>
+          </div>
+        </article>
+
+        <img src="" alt="" class="motivation-imgage">
+
+        <article class="motivation-fact">
+          <svg class="motivation-fact-icon" width="48" height="48">
+            <use href="img/heart-icon.svg"></use>
+          </svg>
+          
+          <div class="motivation-fact-container">
+            <p class="recomended-duration">110 min</p>
+            <h2 class="motivation-title">Daily  norm of sports</h2>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <main>
+      <div class="container">
+        <ul class="favorite-exercises-list">
+          <!-- Exercises will be dynamically inserted here -->
+        </ul>
+
+        <div class="pagination">
+          <button class="pagination-button">Previous</button>
+          <span class="pagination-info">Page 1 of 10</span>
+          <button class="pagination-button">Next</button>
+        </div>
+      </div>
+    </main>
+
+    <load src="./partials/footer.html" />
+  </body>
+</html>
