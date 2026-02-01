@@ -1,25 +1,26 @@
 <header class="header">
   <div class="container">
+    <a class="nav-logo" href="/" aria-label="Site logo">
+      <svg class="nav-logo-icon" width="132" height="14">
+        <use href="{=$icon-path}"></use>
+      </svg>
+    </a>
+
     <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="132" height="14">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
       <ul class="nav-list">
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link {=$highlight-act}" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-2.html">Favourites</a>
+          <a class="nav-link {=$highlight-curr}" href="../favorites.html">Favourites</a>
         </li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
+      </ul>  
     </nav>
+    
+    <button class="nav-toggle" aria-label="Toggle navigation menu">
+      <svg class="menu-icon" width="32" height="32">
+        <use href="../img/icon-pack/burger-icon.svg"></use>
+      </svg>
+    </button>
   </div>
 </header>

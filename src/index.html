@@ -6,36 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/your-energy.svg" />
+    <load src="./partials/header.html" icon-path="./img/logo.svg" />
 
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
         <div class="hero-text-container">
           <div class="hero-title-container">
-            <svg class="hero-icon" width="48" height="48">
-              <use href="img/heart-icon.svg"></use>
+            <svg class="hero-icon" width="60" height="60">
+              <use href="./img/icon-pack/sun.svg"></use>
             </svg>
-            <h1 class="hero-title">      Get Body in shape, Stay healthy</h1>
+            <h1 class="hero-title">Get <i>Body</i> in shape, Stay healthy</h1>
           </div>
           
-          <h2 class="hero-text">
+          <h2 class="hero-subheading">
             Transform your physique and embrace a healthier lifestyle 
             with our comprehensive fitness and nutrition support.
           </h2>  
         </div>
         
-        <img src="img/hero-image.png" alt="Hero Image" class="hero-image" />
+        <img src="img/main-image/women-sportswear-working-out-outdoors.jpg" 
+        srcset="img/main-image/women-sportswear-working-out-outdoors@0.5x.jpg 0.5x, 
+        img/main-image/women-sportswear-working-out-outdoors.jpg 1x, 
+        img/main-image/women-sportswear-working-out-outdoors@2x.jpg 2x, 
+        img/main-image/women-sportswear-working-out-outdoors@3x.jpg 3x" 
+        height="460"
+        alt="Women sportswear working out outdoors" 
+        class="hero-image" />
 
         <div class="hero-additional-container">
-          <img src="img/tags-image.png" alt="Tags Image" class="tags-image">
+          <img src="img/tags-image/young-women-doing-fitness-outdoors-together.jpg" 
+          srcset="img/tags-image/young-women-doing-fitness-outdoors-together@0.5x.jpg 0.5x, 
+          img/tags-image/young-women-doing-fitness-outdoors-together.jpg 1x, 
+          img/tags-image/young-women-doing-fitness-outdoors-together@2x.jpg 2x, 
+          img/tags-image/young-women-doing-fitness-outdoors-together@3x.jpg 3x" 
+          alt="Young women doing fitness outdoors together" 
+          width="168" 
+          height="100" 
+          class="tags-image">
           <ul class="hero-tags-list">
-            <li class="hero-tags-item">Sport</li>
-            <li class="hero-tags-item">Healthy</li>
-            <li class="hero-tags-item">Workout</li>
-            <li class="hero-tags-item">Diet</li>
+            <li class="hero-tags-item">#Sport</li>
+            <li class="hero-tags-item">#Healthy</li>
+            <li class="hero-tags-item">#Workout</li>
+            <li class="hero-tags-item">#Diet</li>
           </ul>
         </div>
       </div>
@@ -54,65 +73,81 @@
             <li class="filter-tabs-item">Equipment</li>
           </ul>   
         </div>
-        
-        
-        <ul class="exercises-list">
-          <!-- Exercises will be dynamically inserted here -->
-        </ul>
 
-        <div class="pagination">
-          <button class="pagination-button">Previous</button>
-          <span class="pagination-info">Page 1 of 10</span>
-          <button class="pagination-button">Next</button>
+        <div class="main-order-wrapper">
+          <aside class="motivation">
+            <div class="container">
+              <article class="motivation-quote">
+                <svg class="motivation-quote-icon" width="48" height="48">
+                  <use href="img/icon-pack/running-icon.svg"></use>
+                </svg>
+                <div class="motivation-quote-content">
+                  <div class="motivation-quote-header">
+                    <h2 class="motivation-title">Stay Motivated!</h2>
+                    <svg class="quotes" width="20" height="20">
+                      <use href="img/icon-pack/quotes.svg"></use>
+                    </svg>  
+                  </div>
+                  <blockquote class="motivation-text">
+                    A lot of times I find that people who are blessed with the most 
+                    talent don't ever develop that attitude, and the ones who aren't 
+                    blessed in that way are the most competitive and have the biggest 
+                    heart.
+                  </blockquote>
+                  <cite class="motivation-author">Tom Brady</cite>
+                </div>
+              </article>
+
+              <img src="img/aside-image/women-sportswear-taking-break-from-workout.jpg" 
+              srcset="img/aside-image/women-sportswear-taking-break-from-workout@0.5x.jpg 0.5x, 
+              img/aside-image/women-sportswear-taking-break-from-workout.jpg 1x, 
+              img/aside-image/women-sportswear-taking-break-from-workout@2x.jpg 2x, 
+              img/aside-image/women-sportswear-taking-break-from-workout@3x.jpg 3x" 
+              alt="Women sportswear taking break from workout" 
+              class="motivation-imgage">
+
+              <article class="motivation-fact">
+                <svg class="motivation-fact-icon" width="48" height="48">
+                  <use href="img/icon-pack/dumbbell-icon.svg"></use>
+                </svg>
+                
+                <div class="motivation-fact-container">
+                  <span class="recomended-duration">110 min</span>
+                  <h2 class="motivation-title">Daily  norm of sports</h2>
+                  <p class="motivation-text">
+                    The World Health Organization recommends at least 150 minutes 
+                    of moderate-intensity aerobic physical activity throughout the 
+                    week for adults aged 18-64. However, what happens if we adjust 
+                    that number to 110 minutes every day? While it might seem like 
+                    a high number to hit, dedicating 110 minutes daily to sporting 
+                    activities may offer unparalleled benefits to physical health, 
+                    mental well-being, and overall quality of life.
+                  </p>  
+                </div>
+              </article>
+            </div>
+          </aside>      
+
+
+          <ul class="exercises-list">
+            <!-- Exercises will be dynamically inserted here -->
+          </ul>
+
+          <div class="pagination">
+            <button class="pagination-button">Previous</button>
+            <span class="pagination-info">Page 1 of 10</span>
+            <button class="pagination-button">Next</button>
+          </div>  
         </div>
+        
+        
+        
       </div>
     </main>
 
-    <section class="motivation">
-      <div class="container">
-        <article class="motivation-quote">
-          <svg class="motivation-quote-icon" width="48" height="48">
-            <use href="img/heart-icon.svg"></use>
-          </svg>
-          <div class="motivation-quote-content">
-            <div class="motivation-quote-header">
-              <h2 class="motivation-title">Stay Motivated!</h2>
-              <svg class="quotes">
-                <use href="img/quotes-icon.svg"></use>
-              </svg>  
-            </div>
-            <blockquote class="motivation-text">
-              "The only bad workout is the one that didn't happen."
-            </blockquote>
-            <cite class="motivation-author">- Unknown</cite>
-          </div>
-        </article>
+    
 
-        <img src="" alt="" class="motivation-imgage">
-
-        <article class="motivation-fact">
-          <svg class="motivation-fact-icon" width="48" height="48">
-            <use href="img/heart-icon.svg"></use>
-          </svg>
-          
-          <div class="motivation-fact-container">
-            <span class="recomended-duration">110 min</span>
-            <h2 class="motivation-title">Daily  norm of sports</h2>
-            <p class="motivation-text">
-              The World Health Organization recommends at least 150 minutes 
-              of moderate-intensity aerobic physical activity throughout the 
-              week for adults aged 18-64. However, what happens if we adjust 
-              that number to 110 minutes every day? While it might seem like 
-              a high number to hit, dedicating 110 minutes daily to sporting 
-              activities may offer unparalleled benefits to physical health, 
-              mental well-being, and overall quality of life.
-            </p>  
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <load src="./partials/footer.html" />
+    <load src="./partials/footer.html" icon-path="./img/logo.svg" />
 
     <script type="module" src="./main.js"></script>
   </body>
