@@ -7,14 +7,28 @@
     </a>
 
     <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-item active">
-          <a class="nav-link {=$highlight-act}" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="../favorites.html">Favourites</a>
-        </li>
-      </ul>  
+      <div class="nav-container">
+        <div class="nav-button-wrapper">
+          <button class="nav-close">
+            <svg class="close-icon" width="32" height="32">
+              <use href="../img/icon-pack/x.svg"></use>
+            </svg>
+          </button>  
+        </div>
+        
+
+        <ul class="nav-list">
+          <li class="nav-item active">
+            <a class="nav-link {=$highlight-act}" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {=$highlight-curr}" href="../favorites.html">Favourites</a>
+          </li>
+        </ul>
+
+        <load src="partials/socials.html"/>  
+      </div>
+      
     </nav>
     
     <button class="nav-toggle" aria-label="Toggle navigation menu">

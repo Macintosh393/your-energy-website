@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 2</title>
+    <title>Favorites</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <load
       src="./partials/header.html"
-      icon-path="./img/sprite.svg#logo"
+      icon-path="./img/logo.svg"
       highlight-act="active"
     />
 
@@ -24,35 +25,54 @@
     <section class="motivation">
       <div class="container">
         <article class="motivation-quote">
-          <svg class="motivation-quote-icon" width="48" height="48">
-            <use href="img/heart-icon.svg"></use>
-          </svg>
+          <div class="motivation-quote-icon-wrapper">
+            <svg class="motivation-quote-icon" width="20" height="20">
+              <use href="img/icon-pack/running-icon.svg"></use>
+            </svg>
+          </div>
+
           <div class="motivation-quote-content">
             <div class="motivation-quote-header">
-              <h2 class="motivation-title">Stay Motivated!</h2>
-              <svg class="quotes">
-                <use href="img/quotes-icon.svg"></use>
-              </svg>  
+              <h2 class="motivation-title">Quote of the day</h2>
+              <div class="quotes-wrapper">
+                <svg class="quotes" width="20" height="20">
+                  <use href="img/icon-pack/quotes.svg"></use>
+                </svg>   
+              </div>
+                
             </div>
             <blockquote class="motivation-text">
-              "The only bad workout is the one that didn't happen."
+              A lot of times I find that people who are blessed with the most 
+              talent don't ever develop that attitude, and the ones who aren't 
+              blessed in that way are the most competitive and have the biggest 
+              heart.
             </blockquote>
-            <cite class="motivation-author">- Unknown</cite>
+            <cite class="motivation-author">Tom Brady</cite>
           </div>
         </article>
 
-        <img src="" alt="" class="motivation-imgage">
+        <div class="motivation-image-wrapper">
+          <img src="img/favorites-image/women-sportswear-working-out-outdoors.jpg" 
+          srcset="img/favorites-image/women-sportswear-working-out-outdoors@0.5x.jpg 0.5x, 
+          img/favorites-image/women-sportswear-working-out-outdoors.jpg 1x, 
+          img/favorites-image/women-sportswear-working-out-outdoors@2x.jpg 2x, 
+          img/favorites-image/women-sportswear-working-out-outdoors@3x.jpg 3x" 
+          alt="Women sportswear working out outdoors" 
+          class="motivation-image">  
+        </div>
 
         <article class="motivation-fact">
-          <svg class="motivation-fact-icon" width="48" height="48">
-            <use href="img/heart-icon.svg"></use>
-          </svg>
-          
-          <div class="motivation-fact-container">
-            <p class="recomended-duration">110 min</p>
-            <h2 class="motivation-title">Daily  norm of sports</h2>
-          </div>
-        </article>
+                <div class="motivation-fact-icon-wrapper">
+                  <svg class="motivation-fact-icon" width="20" height="20">
+                    <use href="img/icon-pack/dumbbell-icon.svg"></use>
+                  </svg>  
+                </div>
+                
+                <div class="motivation-fact-container">
+                  <p class="recomended-duration">110 min</p>
+                  <h2 class="motivation-fact-title">Daily  norm of sports</h2>
+                </div>
+              </article>
       </div>
     </section>
 
@@ -69,7 +89,5 @@
         </div>
       </div>
     </main>
-
-    <load src="./partials/footer.html" />
   </body>
 </html>
