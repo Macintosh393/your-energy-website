@@ -48,6 +48,7 @@
           height="460"
           alt="Women sportswear working out outdoors"
           class="hero-image"
+          loading="eager"
         />
 
         <div class="hero-additional-container">
@@ -83,21 +84,25 @@
           </div>
 
           <div class="exercises-nav">
-            <div class="exercises-search">
+            <form class="exercises-search">
               <input
                 type="text"
                 class="exercises-search-input"
                 placeholder="Search"
               />
-              <svg class="search-delete-icon" width="18" height="18">
-                <use href="search-icons/x.svg"></use>
-              </svg>
-              <svg class="search-icon" width="18" height="18">
-                <use href="search-icons/search.svg"></use>
-              </svg>
-            </div>
+              <button type="reset" class="search-delete-icon">
+                <svg width="18" height="18">
+                  <use href="search-icons/x.svg"></use>
+                </svg>
+              </button>
+              <button class="search-icon" type="submit">
+                <svg width="18" height="18">
+                  <use href="search-icons/search.svg"></use>
+                </svg>
+              </button>
+            </form>
             <ul class="filter-tabs-list">
-              <li class="filter-tabs-item">Muscles</li>
+              <li class="filter-tabs-item active">Muscles</li>
               <li class="filter-tabs-item">Body parts</li>
               <li class="filter-tabs-item">Equipment</li>
             </ul>
@@ -144,6 +149,7 @@
                   "
                   alt="Women sportswear taking break from workout"
                   class="motivation-image"
+                  loading="lazy"
                   width="335"
                   height="242"
                 />

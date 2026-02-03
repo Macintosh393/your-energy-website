@@ -50,7 +50,7 @@
 .hero-image {
   object-fit: cover;
   height: 460px;
-  object-position: 45%;
+  object-position: 50% 20%;
   border-radius: 30px;
   width: 100%;
 }
@@ -100,7 +100,6 @@ main > .container {
 
 .main-heading {
   font-weight: 400;
-  font-style: Regular;
   font-size: 28px;
   line-height: 38px;
   letter-spacing: -2%;
@@ -108,7 +107,6 @@ main > .container {
 
 .category-heading {
   font-weight: 400;
-  font-style: Regular;
   font-size: 20px;
   line-height: 20px;
   letter-spacing: -2%;
@@ -154,7 +152,15 @@ main > .container {
 }
 
 .search-delete-icon {
-  margin: 0 4px;
+  background: none;
+  border: none;
+  padding: 0 6px;
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .filter-tabs-list {
@@ -168,10 +174,19 @@ main > .container {
 }
 
 .filter-tabs-item {
-  padding: 4px 0;
-  &:first-child {
-    border-bottom: 4px solid #242424;
-  }
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.filter-tabs-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #242424;
+  height: 4px;
+  border-radius: 2px;
 }
 
 .motivation {
@@ -210,6 +225,11 @@ main > .container {
   color: #f4f4f4;
 }
 
+.motivation-quote-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .motivation-quote-header {
   display: flex;
   justify-content: space-between;
@@ -244,7 +264,6 @@ main > .container {
   letter-spacing: 0px;
 
   margin: 0;
-  margin-bottom: 16px;
   color: #f4f4f460;
 }
 
@@ -254,6 +273,7 @@ main > .container {
   font-style: normal;
   line-height: 18px;
   letter-spacing: 0px;
+  margin-top: auto;
 }
 
 .motivation-image-wrapper {
@@ -322,10 +342,12 @@ main > .container {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0px;
-  margin-top: 10px;
-  white-space: wrap;
+  margin-top: 16px;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .exercises {
@@ -383,6 +405,7 @@ main > .container {
   /* Hero */
   .hero {
     margin-top: 176px;
+    padding: 0 32px;
   }
 
   .hero-icon-wrapper {
@@ -418,10 +441,12 @@ main > .container {
   /* Main */
   main {
     margin-bottom: 100px;
+    padding-left: 32px;
+    padding-right: 31px;
   }
 
   main > .container {
-    max-width: 728px;
+    max-width: 705px;
   }
 
   .main-heading {
@@ -436,6 +461,7 @@ main > .container {
   .category-heading {
     font-size: 24px;
     line-height: 32px;
+    margin-top: auto;
   }
 
   .filter-tabs-list {
@@ -469,7 +495,7 @@ main > .container {
   .motivation > .container {
     flex-direction: row;
     flex-wrap: wrap;
-    row-gap: 32px;
+    gap: 32px 16px;
   }
 
   .motivation-quote {
@@ -581,11 +607,14 @@ main > .container {
 
   .motivation-image-wrapper {
     max-width: 444px;
-    /* max-height: 242px; */
   }
 
   .motivation-fact {
     max-width: 444px;
     height: auto;
+  }
+
+  .motivation-fact-text {
+    display: inline-block;
   }
 }

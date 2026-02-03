@@ -23,6 +23,10 @@
     order: 3;
   }
 
+  .motivation-image {
+    object-position: 50% 0%;
+  }
+
   .motivation-fact-icon {
     filter: none;
   }
