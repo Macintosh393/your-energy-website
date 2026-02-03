@@ -1,41 +1,43 @@
 <footer class="footer">
   <div class="container">
-    <div class="footer-links">
-      <div class="logo">
-        <svg class="footer-logo-icon" width="132" height="14">
-          <use href="{=$icon-path}"></use>
-        </svg>
+    <div class="footer-wrapper">
+      <div class="footer-links">
+        <div class="logo">
+          <svg class="footer-logo-icon" width="132" height="14">
+            <use href="{=$icon-path}"></use>
+          </svg>
+        </div>
+        <load src="partials/socials.html" />
       </div>
-      <load src="partials/socials.html" />
+
+      <article class="footer-main-content">
+        <h2 class="footer-title">
+          Transforming your <i>body</i> shape with us
+        </h2>
+        <div class="footer-subscription-form">
+          <h3 class="form-call-to-action">Subscribe and learn about new exercises!</h3>
+          <form class="subscription-form">
+            <input
+              type="email"
+              class="subscription-input"
+              placeholder="Email"
+              required
+            />
+            <button type="submit" class="subscription-button">Send</button>
+        </div>  
+      </article>  
     </div>
-
-    <article class="footer-main-content">
-      <h2 class="footer-title">
-        Transforming your <i>body</i> shape with us
-      </h2>
-      <div class="footer-subscription-form">
-        <h3>Subscribe and learn about new exercises!</h3>
-        <form class="subscription-form">
-          <input
-            type="email"
-            class="subscription-input"
-            placeholder="Email"
-            required
-          />
-          <button type="submit" class="subscription-button">Send</button>
-      </div>  
-    </article>
-    
-
     
     <div class="footer-copyright-container">
       <p class="footer-copyright">
         Your Energy. All rights reserved.
       </p>
       <div class="copyright-wrapper">
-        <p class="footer-copyright">
-          Privacy Policy / Terms of Service
-        </p>
+        <div class="footer-copyright">
+          <a href="" class="footer-copyright-link">Privacy Policy</a>
+          <span class="footer-copyright-devider">/</span>
+          <a href="" class="footer-copyright-link">Terms of Service</a>
+        </div>
         <p class="footer-copyright">
           &copy;2026
         </p>  

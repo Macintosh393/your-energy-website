@@ -6,10 +6,10 @@
 
 
 @import url('./header.css');
-@import url('./index.css');
-@import url('./favorites.css');
 @import url('./footer.css');
 @import url('./socials.css');
+@import url('./index.css');
+@import url('./favorites.css');
 
 /**
   |============================

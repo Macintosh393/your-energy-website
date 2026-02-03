@@ -7,6 +7,10 @@
     <title>Favorites</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   </head>
   <body>
     <load
@@ -15,79 +19,80 @@
       highlight-act="active"
     />
 
-    <section class="hero">
-      <div class="container">
-        <h1 class="page-title">Favorites</h1>
-      </div>
-    </section>
-    
-
-    <section class="motivation">
-      <div class="container">
-        <article class="motivation-quote">
-          <div class="motivation-quote-icon-wrapper">
-            <svg class="motivation-quote-icon" width="20" height="20">
-              <use href="img/icon-pack/running-icon.svg"></use>
-            </svg>
-          </div>
-
-          <div class="motivation-quote-content">
-            <div class="motivation-quote-header">
-              <h2 class="motivation-title">Quote of the day</h2>
-              <div class="quotes-wrapper">
-                <svg class="quotes" width="20" height="20">
-                  <use href="img/icon-pack/quotes.svg"></use>
-                </svg>   
+    <section class="favorites">
+      <h1 class="page-title">Favorites</h1>
+      
+      <div class="favorites-wrapper">
+        <section class="motivation">
+          <div class="container">
+            <article class="motivation-quote">
+              <div class="motivation-quote-icon-wrapper">
+                <svg class="motivation-quote-icon" width="20" height="20">
+                  <use href="img/icon-pack/running-icon.svg"></use>
+                </svg>
               </div>
-                
+
+              <div class="motivation-quote-content">
+                <div class="motivation-quote-header">
+                  <h2 class="motivation-title">Quote of the day</h2>
+                  <div class="quotes-wrapper">
+                    <svg class="quotes" width="20" height="20">
+                      <use href="img/icon-pack/quotes.svg"></use>
+                    </svg>   
+                  </div>
+                    
+                </div>
+                <blockquote class="motivation-text">
+                  A lot of times I find that people who are blessed with the most 
+                  talent don't ever develop that attitude, and the ones who aren't 
+                  blessed in that way are the most competitive and have the biggest 
+                  heart.
+                </blockquote>
+                <cite class="motivation-author">Tom Brady</cite>
+              </div>
+            </article>
+
+            <div class="motivation-image-wrapper">
+              <img src="img/favorites-image/women-sportswear-working-out-outdoors.jpg" 
+              srcset="img/favorites-image/women-sportswear-working-out-outdoors@0.5x.jpg 0.5x, 
+              img/favorites-image/women-sportswear-working-out-outdoors.jpg 1x, 
+              img/favorites-image/women-sportswear-working-out-outdoors@2x.jpg 2x, 
+              img/favorites-image/women-sportswear-working-out-outdoors@3x.jpg 3x" 
+              alt="Women sportswear working out outdoors" 
+              class="motivation-image">  
             </div>
-            <blockquote class="motivation-text">
-              A lot of times I find that people who are blessed with the most 
-              talent don't ever develop that attitude, and the ones who aren't 
-              blessed in that way are the most competitive and have the biggest 
-              heart.
-            </blockquote>
-            <cite class="motivation-author">Tom Brady</cite>
+
+            <article class="motivation-fact">
+              <svg class="motivation-fact-icon" width="20" height="20">
+                <use href="img/icon-pack/dumbbell-icon.svg"></use>
+              </svg>
+              
+              <div class="motivation-fact-container">
+                <p class="recomended-duration">110 min</p>
+                <h2 class="motivation-fact-title">Daily  norm of sports</h2>
+              </div>
+            </article>
           </div>
-        </article>
+        </section>
 
-        <div class="motivation-image-wrapper">
-          <img src="img/favorites-image/women-sportswear-working-out-outdoors.jpg" 
-          srcset="img/favorites-image/women-sportswear-working-out-outdoors@0.5x.jpg 0.5x, 
-          img/favorites-image/women-sportswear-working-out-outdoors.jpg 1x, 
-          img/favorites-image/women-sportswear-working-out-outdoors@2x.jpg 2x, 
-          img/favorites-image/women-sportswear-working-out-outdoors@3x.jpg 3x" 
-          alt="Women sportswear working out outdoors" 
-          class="motivation-image">  
-        </div>
+        <main>
+          <div class="container">
+            <ul class="favorite-exercises-list">
+              <p class="favorites-placeholder">
+                It appears that you haven't added any exercises to your favorites yet. 
+                To get started, you can add exercises that you like to your favorites for 
+                easier access in the future.
+              </p>
+            </ul>
 
-        <article class="motivation-fact">
-                <div class="motivation-fact-icon-wrapper">
-                  <svg class="motivation-fact-icon" width="20" height="20">
-                    <use href="img/icon-pack/dumbbell-icon.svg"></use>
-                  </svg>  
-                </div>
-                
-                <div class="motivation-fact-container">
-                  <p class="recomended-duration">110 min</p>
-                  <h2 class="motivation-fact-title">Daily  norm of sports</h2>
-                </div>
-              </article>
+            <!-- <div class="pagination">
+              <button class="pagination-button">Previous</button>
+              <span class="pagination-info">Page 1 of 10</span>
+              <button class="pagination-button">Next</button>
+            </div> -->
+          </div>
+        </main>
       </div>
     </section>
-
-    <main>
-      <div class="container">
-        <ul class="favorite-exercises-list">
-          <!-- Exercises will be dynamically inserted here -->
-        </ul>
-
-        <div class="pagination">
-          <button class="pagination-button">Previous</button>
-          <span class="pagination-info">Page 1 of 10</span>
-          <button class="pagination-button">Next</button>
-        </div>
-      </div>
-    </main>
   </body>
 </html>

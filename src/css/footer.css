@@ -1,95 +1,191 @@
 .footer {
   height: 590px;
-  padding: 8px 20px;
 
   background-color: #242424;
   color: #fff;
+}
 
-  .footer-logo-icon {
-    filter: invert(100%) sepia(55%) saturate(1872%) hue-rotate(184deg) brightness(121%) contrast(91%);
+footer > .container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  padding-top: 30px;
+  height: 100%;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer-logo-icon {
+  filter: invert(100%) sepia(55%) saturate(1872%) hue-rotate(184deg) brightness(121%) contrast(91%);
+}
+
+.footer-title {
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 44px;
+  letter-spacing: -2%;
+}
+
+.footer-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: auto;
+  max-width: 434px;
+}
+
+.footer-subscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-call-to-action {
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 0px;
+}
+
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subscription-input {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+
+  width: 100%;
+  height: 42px;
+  padding: 0 15px;
+
+  background: none;
+  border-radius: 30px;
+  border: 1px solid #F4F4F4;
+
+  &::placeholder {
+    color: #F4F4F460;
+  }
+}
+
+.subscription-button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0px;
+
+  width: 100%;
+  height: 42px;
+  padding: 0 15px;
+
+  background: #F4F4F4;
+  border-radius: 30px;
+  border: 1px solid #F4F4F4;
+}
+
+
+.footer-copyright-container {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -2%;
+  color: #C6CDD1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+
+  .copyright-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 534px;
   }
 
-  .footer-title {
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 38px;
-    line-height: 44px;
-    letter-spacing: -2%;
+  .footer > .container {
+    padding: 20px 32px;
+  }
+
+  .footer-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
   }
 
   .footer-main-content {
-    margin-bottom: auto;
-
-    .footer-subscription-form {
-      h3 {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 18px;
-        letter-spacing: 0px;
-      }
-    }
-
-    .subscription-form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .subscription-input {
-      font-weight: 400;
-      font-style: Regular;
-      font-size: 14px;
-      line-height: 18px;
-      letter-spacing: 0%;
-
-      width: 100%;
-      height: 42px;
-      padding: 0 15px;
-
-      background: none;
-      border-radius: 30px;
-      border: 1px solid #F4F4F4;
-
-      &::placeholder {
-        color: #F4F4F460;
-      }
-    }
-
-    .subscription-button {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 18px;
-      letter-spacing: 0px;
-
-      width: 100%;
-      height: 42px;
-      padding: 0 15px;
-
-      background: #F4F4F4;
-      border-radius: 30px;
-      border: 1px solid #F4F4F4;
-    }
+    max-width: 420px;
+    margin-top: 0;
   }
-  
 
+  .footer-title {
+    padding-top: 10px;
+    font-size: 56px;
+    line-height: 60px;
+  }
 
+  .form-call-to-action {
+    font-size: 18px;
+    line-height: 24px;
+  }
 
+  .subscription-form {
+    max-width: 352px;
+  }
 
   .footer-copyright-container {
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: -2%;
-    color: #C6CDD1;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .copyright-wrapper {
+    gap: 178px;
+  }
+}
 
-    .copyright-wrapper {
-      display: flex;
-      justify-content: space-between;
-    }
+@media screen and (min-width: 1440px) {
+  .footer {
+    height: 328px;
+  }
+
+  .footer-main-content {
+    flex-direction: row;
+    width: auto;
+    max-width:fit-content;
+    gap: 115px;
+  }
+
+  .footer-title {
+    max-width: 595px;
+  }
+
+  .footer-subscription-form {
+    max-width: 352px;
+  }
+
+  .copyright-wrapper {
+    gap: 498px;
+    margin-right: 300px;
   }
 }
