@@ -16,11 +16,36 @@
         </li>
       </ul>  
     </nav>
+
+    <div class="socials-wrapper">
+      <load src="partials/socials.html"/>
+    </div>
     
     <button class="nav-toggle" aria-label="Toggle navigation menu">
       <svg class="menu-icon" width="32" height="32">
         <use href="../img/icon-pack/burger-icon.svg"></use>
       </svg>
     </button>
+  </div>
+
+  <div class="mobile-menu-container">
+    <div class="nav-button-wrapper">
+      <button class="nav-close">
+        <svg class="close-icon" width="32" height="32">
+          <use href="../img/icon-pack/x.svg"></use>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item active">
+        <a class="mobile-nav-link {=$highlight-act}" href="/">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a class="mobile-nav-link {=$highlight-curr}" href="../favorites.html">Favourites</a>
+      </li>
+    </ul>
+
+    <load src="partials/socials.html"/>
   </div>
 </header>

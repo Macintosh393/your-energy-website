@@ -1,0 +1,121 @@
+.favorites {
+    padding: 0 20px;
+    margin-top: 132px;
+    margin-bottom: 46px;
+
+    .page-title {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: -2%;
+        margin-bottom: 20px;
+        color: #242424;
+    }
+
+    .motivation-quote {
+        height: auto ;
+    }
+
+    .motivation-image-wrapper {
+        max-width: 100%;
+        width: 100%;
+        height: 119px;
+        order: 3;
+    }
+
+    .motivation-fact-icon {
+        filter: none;
+    }
+
+    .motivation-fact {
+        height: 119px;
+        flex-direction: column;
+    }
+
+    main {
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    main > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .favorites-placeholder {
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .favorites {
+        padding: 0 32px;
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .motivation > .container {
+            gap: 16px;
+            
+        }
+
+        .page-title {
+            font-size: 44px;
+            line-height: 48px;
+            margin-bottom: 32px;
+        }
+
+        .motivation-quote {
+            max-width: 704px;
+            height: 220px;
+        }
+
+        .motivation-fact {
+            padding: 20px;
+            max-width: 344px;
+        }
+
+        .motivation-image-wrapper {
+            max-width: 344px;
+            width: 344px;
+        }
+
+        .favorites-placeholder {
+            padding: 112px 100px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .favorites {
+        max-width: 1440px;
+
+        .motivation > .container {
+            order: 1;
+            width: 494px;
+        }
+
+        main {
+            order: 2;
+            flex-grow: 1;
+        }
+
+        .favorites-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+        }
+        
+        .motivation-fact {
+            max-width: 239px;
+        }
+
+        .motivation-image-wrapper {
+            width: 239px;
+        }
+    }
+}

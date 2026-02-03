@@ -1,10 +1,31 @@
 .hero {
+    margin-top: 132px;
     padding: 0 20px;
+}
+
+.hero > .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-icon-wrapper {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    min-width: 50px;
+    max-width: 50px;
+    height: 40px;
+    overflow: visible;
 }
 
 .hero-icon {
     transform: scale(0.66);
-    float: left;
+    position: relative;
+    top: 5px;
+    left: -10px;
+    overflow: visible;
 }
 
 .hero-title {
@@ -13,15 +34,17 @@
     font-size: 38px;
     line-height: 44px;
     letter-spacing: -2%;
+
+    margin-bottom: 20px;
 }
 
 .hero-subheading {
     font-weight: 400;
-    font-style: Regular;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: -2%;
 
+    margin-bottom: 20px;
 }
 
 
@@ -30,6 +53,7 @@
     height: 460px;
     object-position: 45%;
     border-radius: 30px;
+    width: 100%;
 }
 
 .tags-image {
@@ -39,17 +63,18 @@
 
 .hero-tags-list {
     display: flex;
+    justify-content: end;
     flex-wrap: wrap;
     gap: 8px;
-}
 
-.hero-tags-item {
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0px;
+    margin-top: 16px;
+}
 
-
+.hero-tags-item {
     border: 1px solid #242424;
     border-radius: 30px;
     padding: 4px 11px;
@@ -58,8 +83,525 @@
 
 main {
     padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    margin-bottom: 80px;
+}
 
-    .container {
-        max-width: 375px;
+main > .container {
+    width: 100%;
+    max-width: 335px;
+}
+
+.main-heading-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main-heading {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -2%;
+}
+
+.category-heading {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -2%;
+    color: #24242450;
+}
+
+.main-order-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.exercises-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.exercises-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    border: 1px solid #242424;
+    padding: 12px 14px;
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+.exercises-search-input {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+
+    background: none;
+    border: none;
+    margin-right: auto;
+
+    &::placeholder {
+        color: #242424;
+        opacity: 1;
     }
+}
+
+.search-delete-icon {
+    margin: 0 4px;
+}
+
+
+.filter-tabs-list {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.filter-tabs-item {
+    padding: 4px 0;
+    &:first-child {
+        border-bottom: 4px solid #242424;
+    }    
+}
+    
+.motivation {
+    order: 2;
+}
+
+.motivation > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.motivation-quote-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f4f4f420;
+}
+
+.motivation-quote-icon {
+    filter: invert(100%) sepia(55%) saturate(1872%) hue-rotate(184deg) brightness(121%) contrast(91%);
+}
+
+.motivation-quote {
+    height: 209px;
+    display: flex;
+    gap: 15px;
+    background-color: #242424;
+    border-radius: 20px;
+    padding: 20px;
+
+    color:#f4f4f4;
+}
+
+.motivation-quote-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
+.motivation-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    margin-bottom: 8px;
+}
+
+.quotes-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+    width: 20px;
+    height: 20px;
+}
+
+.quotes {
+    transform: scale(0.9);
+}
+
+.motivation-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0px;
+
+    margin: 0;
+    margin-bottom: 16px;
+    color:#f4f4f460;
+}
+
+.motivation-author {
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: 0px;
+}
+
+
+
+.motivation-image-wrapper {
+    overflow: hidden;
+    border-radius: 20px;
+    max-width: 375px;
+    height: 242px;
+}
+
+.motivation-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60%;
+}
+
+
+.motivation-fact {
+    width: 100%;
+    height: 209px;
+    display: flex;
+    gap: 15px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.motivation-fact-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #242424;
+}
+
+.motivation-fact-icon {
+    filter: invert(100%) sepia(55%) saturate(1872%) hue-rotate(184deg) brightness(121%) contrast(91%);
+}
+
+.motivation-fact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.recomended-duration {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+
+.motivation-fact-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0px;
+
+    color: #24242460;
+}
+
+.motivation-fact-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    margin-top: 10px;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+.exercises {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+
+
+
+.exercises-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.exercises-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../img/tags-image/young-women-doing-fitness-outdoors-together@3x.jpg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    width: 335px;
+    height: 225px;
+
+    border-radius: 12px;
+}
+
+.exercise-heading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #F4F4F4;
+}
+
+.exercise-tip {
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #f4f4f440;
+}
+
+
+@media screen and (min-width: 768px) {
+    /* Hero */
+    .hero {
+        margin-top: 176px;
+    }
+
+    .hero-icon-wrapper {
+        margin-right: 20px;
+    }
+    
+    .hero-icon {
+        transform: scale(1.0);
+        top: 50%;
+        left: 1%;
+    }
+
+    .hero-title {
+        font-size: 74px;
+        line-height: 74px;
+
+        max-width: 640px;
+    }
+
+    .hero-subheading {
+        font-size: 18px;
+        line-height: 24px;
+
+        margin-bottom: 32px;
+    }
+
+    .hero-tags-list {
+        justify-content: end;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+
+    /* Main */
+    main {
+        margin-bottom: 100px;
+    }
+
+    main > .container{
+        max-width: 728px;
+    }
+
+    .main-heading {
+        font-size: 44px;
+        line-height: 48px;
+    }
+
+    .main-heading-wrapper {
+        margin-bottom: 32px;
+    }
+
+    .category-heading {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .filter-tabs-list {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .exercises-nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .exercises-search {
+        margin: 0;
+        width: 273px;
+    }
+
+
+    .exercises-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px 15px;
+    }
+
+    .exercises-item {
+        max-width: 225px;
+        flex-grow: 1;
+    }
+
+    /* Motivation */
+    .motivation > .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 32px;
+    }
+
+    .motivation-quote {
+        max-width: 400px;
+        height: 249px;
+        padding: 40px;
+    }
+
+    .motivation-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .motivation-author {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .motivation-image-wrapper {
+        max-width: 288px;
+    }
+
+    .motivation-fact {
+        max-width: 400px;
+        height: 249px;
+        padding: 40px;
+    }
+
+
+}
+
+@media screen and (min-width: 1440px) {
+    /* Hero */
+    .hero > .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .hero-text-container {
+        width: 640px;
+        order: 1;
+    }
+
+    .hero-image {
+        order: 3;
+        height: 350px;
+        object-position: 50% 30%;
+    }
+
+    .hero-additional-container {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+        gap: 32px;
+        order: 2;
+        width: 200px;
+        margin-left: auto;
+        margin-bottom: 32px;
+    }
+
+    .tags-image {
+        display: block;
+    }
+
+    .hero-tags-list {
+        max-width: 197px;
+        margin: 0;
+    }
+
+    .hero-subheading {
+        max-width: 528px;
+    }
+
+
+    /* Main */
+    main > .container {
+        max-width: 1400px;
+    }
+
+    .exercises-navigation-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .exercises-nav {
+        gap: 30px;
+    }
+    
+    .main-order-wrapper {
+        flex-direction: row;
+    }
+
+    .exercises {
+        order: 2;
+    }
+
+    .exercises-item {
+        max-width: 290px;
+        height: 242px;
+    }
+
+    /* Motivation */
+    .motivation {
+        order: 1;
+    }
+
+    .motivation-quote {
+        max-width: 444px;
+        height: 242px;
+    }
+
+    .motivation-image-wrapper {
+        max-width: 444px;
+        /* max-height: 242px; */
+    }
+
+    .motivation-fact {
+        max-width: 444px;
+        height: auto;
+    }
+
 }

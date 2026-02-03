@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Your Energy</title>
     <link rel="stylesheet" href="./css/styles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,9 +19,12 @@
       <div class="container">
         <div class="hero-text-container">
           <div class="hero-title-container">
-            <svg class="hero-icon" width="60" height="60">
-              <use href="./img/icon-pack/sun.svg"></use>
-            </svg>
+            <div class="hero-icon-wrapper">
+              <svg class="hero-icon" width="60" height="60">
+                <use href="./img/icon-pack/sun.svg"></use>
+              </svg>  
+            </div>
+            
             <h1 class="hero-title">Get <i>Body</i> in shape, Stay healthy</h1>
           </div>
           
@@ -62,31 +65,50 @@
 
     <main>
       <div class="container">
-        <h2>Exercises</h2>
-        <div class="exercises-nav">
-          <div class="exercises-search">
-            <input type="text" class="exercises-search-input" placeholder="Search">
+        <div class="exercises-navigation-wrapper">
+          <div class="main-heading-wrapper">
+            <h2 class="main-heading">Exercises /</h2>
+            <h3 class="category-heading">Waist</h3>  
           </div>
-          <ul class="filter-tabs-list">
-            <li class="filter-tabs-item">Muscles</li>
-            <li class="filter-tabs-item">Body parts</li>
-            <li class="filter-tabs-item">Equipment</li>
-          </ul>   
+          
+          <div class="exercises-nav">
+            <div class="exercises-search">
+              <input type="text" class="exercises-search-input" placeholder="Search">
+              <svg class="search-delete-icon" width="18" height="18">
+                <use href="img/search-icons/x.svg"></use>
+              </svg>
+              <svg class="search-icon" width="18" height="18">
+                <use href="img/search-icons/search.svg"></use>
+              </svg>
+            </div>
+            <ul class="filter-tabs-list">
+              <li class="filter-tabs-item">Muscles</li>
+              <li class="filter-tabs-item">Body parts</li>
+              <li class="filter-tabs-item">Equipment</li>
+            </ul>   
+          </div>  
         </div>
+        
 
         <div class="main-order-wrapper">
-          <aside class="motivation">
+          <section class="motivation">
             <div class="container">
               <article class="motivation-quote">
-                <svg class="motivation-quote-icon" width="48" height="48">
-                  <use href="img/icon-pack/running-icon.svg"></use>
-                </svg>
+                <div class="motivation-quote-icon-wrapper">
+                  <svg class="motivation-quote-icon" width="20" height="20">
+                    <use href="img/icon-pack/running-icon.svg"></use>
+                  </svg>
+                </div>
+                
                 <div class="motivation-quote-content">
                   <div class="motivation-quote-header">
-                    <h2 class="motivation-title">Stay Motivated!</h2>
-                    <svg class="quotes" width="20" height="20">
-                      <use href="img/icon-pack/quotes.svg"></use>
-                    </svg>  
+                    <h2 class="motivation-title">Quote of the day</h2>
+                    <div class="quotes-wrapper">
+                      <svg class="quotes" width="20" height="20">
+                        <use href="img/icon-pack/quotes.svg"></use>
+                      </svg>   
+                    </div>
+                     
                   </div>
                   <blockquote class="motivation-text">
                     A lot of times I find that people who are blessed with the most 
@@ -98,23 +120,30 @@
                 </div>
               </article>
 
-              <img src="img/aside-image/women-sportswear-taking-break-from-workout.jpg" 
-              srcset="img/aside-image/women-sportswear-taking-break-from-workout@0.5x.jpg 0.5x, 
-              img/aside-image/women-sportswear-taking-break-from-workout.jpg 1x, 
-              img/aside-image/women-sportswear-taking-break-from-workout@2x.jpg 2x, 
-              img/aside-image/women-sportswear-taking-break-from-workout@3x.jpg 3x" 
-              alt="Women sportswear taking break from workout" 
-              class="motivation-imgage">
+              <div class="motivation-image-wrapper">
+                <img src="img/aside-image/women-sportswear-taking-break-from-workout.jpg" 
+                srcset="img/aside-image/women-sportswear-taking-break-from-workout@0.5x.jpg 0.5x, 
+                img/aside-image/women-sportswear-taking-break-from-workout.jpg 1x, 
+                img/aside-image/women-sportswear-taking-break-from-workout@2x.jpg 2x, 
+                img/aside-image/women-sportswear-taking-break-from-workout@3x.jpg 3x" 
+                alt="Women sportswear taking break from workout" 
+                class="motivation-image"
+                width="335" 
+                height="242">  
+              </div>
+              
 
               <article class="motivation-fact">
-                <svg class="motivation-fact-icon" width="48" height="48">
-                  <use href="img/icon-pack/dumbbell-icon.svg"></use>
-                </svg>
+                <div class="motivation-fact-icon-wrapper">
+                  <svg class="motivation-fact-icon" width="20" height="20">
+                    <use href="img/icon-pack/dumbbell-icon.svg"></use>
+                  </svg>  
+                </div>
                 
                 <div class="motivation-fact-container">
-                  <span class="recomended-duration">110 min</span>
-                  <h2 class="motivation-title">Daily  norm of sports</h2>
-                  <p class="motivation-text">
+                  <p class="recomended-duration">110 min</p>
+                  <h2 class="motivation-fact-title">Daily  norm of sports</h2>
+                  <p class="motivation-fact-text">
                     The World Health Organization recommends at least 150 minutes 
                     of moderate-intensity aerobic physical activity throughout the 
                     week for adults aged 18-64. However, what happens if we adjust 
@@ -126,18 +155,99 @@
                 </div>
               </article>
             </div>
-          </aside>      
+          </section>      
 
+          <section class="exercises">
+            <ul class="exercises-list">
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
 
-          <ul class="exercises-list">
-            <!-- Exercises will be dynamically inserted here -->
-          </ul>
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
 
-          <div class="pagination">
-            <button class="pagination-button">Previous</button>
-            <span class="pagination-info">Page 1 of 10</span>
-            <button class="pagination-button">Next</button>
-          </div>  
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+            </ul>
+
+            <div class="pagination">
+              <button class="pagination-button">Previous</button>
+              <span class="pagination-info">Page 1 of 10</span>
+              <button class="pagination-button">Next</button>
+            </div>
+          </section>
+            
         </div>
         
         
