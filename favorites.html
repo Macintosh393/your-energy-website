@@ -13,9 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" crossorigin href="/your-energy-website/assets/styles-CwdXIF5V.css">
+    <link rel="stylesheet" crossorigin href="/your-energy-website/assets/styles-Ba7PRA8L.css">
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="header">
   <div class="container">
     <a class="nav-logo" href="/" aria-label="Site logo">
@@ -27,7 +28,12 @@
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-item active">
-          <a class="nav-link active" href="index.html">Home</a>
+          <a
+            class="nav-link active"
+            href="index.html"
+            aria-current="page"
+            >Home</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link {=$highlight-curr}" href="favorites.html"
@@ -42,22 +48,34 @@
   <div class="container">
     <ul class="socials-list">
       <li class="socials-item">
-        <a class="socials-link" href="https://www.facebook.com/goITclub/">
-          <svg class="socials-icon" width="28" height="28">
+        <a
+          class="socials-link"
+          href="https://www.facebook.com/goITclub/"
+          aria-label="Facebook link"
+        >
+          <svg class="socials-icon" width="28" height="28" aria-hidden="true">
             <use href="socials-icons/facebook.svg"></use>
           </svg>
         </a>
       </li>
       <li class="socials-item">
-        <a class="socials-link" href="https://www.instagram.com/goitclub/">
-          <svg class="socials-icon" width="28" height="28">
+        <a
+          class="socials-link"
+          href="https://www.instagram.com/goitclub/"
+          aria-label="Instagram link"
+        >
+          <svg class="socials-icon" width="28" height="28" aria-hidden="true">
             <use href="socials-icons/instagram.svg"></use>
           </svg>
         </a>
       </li>
       <li class="socials-item">
-        <a class="socials-link" href="https://www.youtube.com/c/GoIT">
-          <svg class="socials-icon" width="28" height="28">
+        <a
+          class="socials-link"
+          href="https://www.youtube.com/c/GoIT"
+          aria-label="Youtube link"
+        >
+          <svg class="socials-icon" width="28" height="28" aria-hidden="true">
             <use href="socials-icons/youtube.svg"></use>
           </svg>
         </a>
@@ -68,17 +86,22 @@
 
     </div>
 
-    <button class="nav-toggle" aria-label="Toggle navigation menu">
-      <svg class="menu-icon" width="32" height="32">
+    <button
+      class="nav-toggle"
+      aria-label="Toggle navigation menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <svg class="menu-icon" width="32" height="32" aria-hidden="true">
         <use href="icon-pack/burger-icon.svg"></use>
       </svg>
     </button>
   </div>
 
-  <div class="mobile-menu-container">
+  <div class="mobile-menu-container" id="mobile-menu">
     <div class="nav-button-wrapper">
-      <button class="nav-close">
-        <svg class="close-icon" width="32" height="32">
+      <button class="nav-close" aria-label="Close navigation menu">
+        <svg class="close-icon" width="32" height="32" aria-hidden="true">
           <use href="icon-pack/x.svg"></use>
         </svg>
       </button>
@@ -89,7 +112,10 @@
         <a class="mobile-nav-link active" href="index.html">Home</a>
       </li>
       <li class="mobile-nav-item">
-        <a class="mobile-nav-link {=$highlight-curr}" href="favorites.html"
+        <a
+          class="mobile-nav-link {=$highlight-curr}"
+          href="favorites.html"
+          aria-current="page"
           >Favourites</a
         >
       </li>
@@ -99,22 +125,34 @@
   <div class="container">
     <ul class="socials-list">
       <li class="socials-item">
-        <a class="socials-link" href="https://www.facebook.com/goITclub/">
-          <svg class="socials-icon" width="28" height="28">
+        <a
+          class="socials-link"
+          href="https://www.facebook.com/goITclub/"
+          aria-label="Facebook link"
+        >
+          <svg class="socials-icon" width="28" height="28" aria-hidden="true">
             <use href="socials-icons/facebook.svg"></use>
           </svg>
         </a>
       </li>
       <li class="socials-item">
-        <a class="socials-link" href="https://www.instagram.com/goitclub/">
-          <svg class="socials-icon" width="28" height="28">
+        <a
+          class="socials-link"
+          href="https://www.instagram.com/goitclub/"
+          aria-label="Instagram link"
+        >
+          <svg class="socials-icon" width="28" height="28" aria-hidden="true">
             <use href="socials-icons/instagram.svg"></use>
           </svg>
         </a>
       </li>
       <li class="socials-item">
-        <a class="socials-link" href="https://www.youtube.com/c/GoIT">
-          <svg class="socials-icon" width="28" height="28">
+        <a
+          class="socials-link"
+          href="https://www.youtube.com/c/GoIT"
+          aria-label="Youtube link"
+        >
+          <svg class="socials-icon" width="28" height="28" aria-hidden="true">
             <use href="socials-icons/youtube.svg"></use>
           </svg>
         </a>
@@ -135,7 +173,12 @@
           <div class="container">
             <article class="motivation-quote">
               <div class="motivation-quote-icon-wrapper">
-                <svg class="motivation-quote-icon" width="20" height="20">
+                <svg
+                  class="motivation-quote-icon"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
                   <use href="icon-pack/running-icon.svg"></use>
                 </svg>
               </div>
@@ -144,7 +187,12 @@
                 <div class="motivation-quote-header">
                   <h2 class="motivation-title">Quote of the day</h2>
                   <div class="quotes-wrapper">
-                    <svg class="quotes" width="20" height="20">
+                    <svg
+                      class="quotes"
+                      width="20"
+                      height="20"
+                      aria-hidden="true"
+                    >
                       <use href="icon-pack/quotes.svg"></use>
                     </svg>
                   </div>
@@ -169,7 +217,12 @@
             </div>
 
             <article class="motivation-fact">
-              <svg class="motivation-fact-icon" width="20" height="20">
+              <svg
+                class="motivation-fact-icon"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
                 <use href="icon-pack/dumbbell-icon.svg"></use>
               </svg>
 
@@ -181,7 +234,7 @@
           </div>
         </section>
 
-        <main>
+        <main id="main-content">
           <div class="container">
             <ul class="favorite-exercises-list">
               <p class="favorites-placeholder">
