@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Energy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/vanilla-app-template/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-BU5GlPdo.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container">
+    <a class="nav-logo" href="/" aria-label="Site logo">
+      <svg class="nav-logo-icon" width="132" height="14">
+        <use href="data:image/svg+xml,%3csvg%20width='132'%20height='14'%20viewBox='0%200%20132%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.98%208.28L0%200H2.98L6.32%205.74H6.36L9.7%200H12.68L7.7%208.28V14H4.98V8.28Z'%20fill='%23242424'/%3e%3cpath%20d='M12.6703%2011.7V2.3L14.9703%200H22.1703L24.4703%202.3V11.7L22.1703%2014H14.9703L12.6703%2011.7ZM20.7303%2011.68L21.7503%2010.66V3.34L20.7303%202.32H16.4103L15.3903%203.34V10.66L16.4103%2011.68H20.7303Z'%20fill='%23242424'/%3e%3cpath%20d='M26.3742%2011.6V0H29.0942V10.66L30.1142%2011.68H34.0342L35.0542%2010.66V0H37.7742V11.6L35.3742%2014H28.7742L26.3742%2011.6Z'%20fill='%23242424'/%3e%3cpath%20d='M50.8781%209.36V14H48.1581V9.98L46.9581%208.64H42.5981V14H39.8781V0H48.6581L50.7981%202.16V6.4L49.4381%207.78L50.8781%209.36ZM42.5981%206.4H47.4181L48.1181%205.7V2.98L47.4181%202.28H42.5981V6.4Z'%20fill='%23242424'/%3e%3cpath%20d='M57.8234%200H67.9434V2.3H60.5434V5.84H67.3634V8.1H60.5434V11.7H67.9434V14H57.8234V0Z'%20fill='%23242424'/%3e%3cpath%20d='M69.4523%200H71.8923L78.1323%209.5H78.1723V0H80.7923V14H78.3523L72.1123%204.52H72.0723V14H69.4523V0Z'%20fill='%23242424'/%3e%3cpath%20d='M82.8977%200H93.0177V2.3H85.6177V5.84H92.4377V8.1H85.6177V11.7H93.0177V14H82.8977V0Z'%20fill='%23242424'/%3e%3cpath%20d='M105.527%209.36V14H102.807V9.98L101.607%208.64H97.2466V14H94.5266V0H103.307L105.447%202.16V6.4L104.087%207.78L105.527%209.36ZM97.2466%206.4H102.067L102.767%205.7V2.98L102.067%202.28H97.2466V6.4Z'%20fill='%23242424'/%3e%3cpath%20d='M107.323%2011.7V2.3L109.623%200H116.583L118.843%202.26V4.4H116.123V3.26L115.183%202.32H111.063L110.043%203.34V10.66L111.063%2011.68H115.223L116.203%2010.7V8.52H113.203V6.2H118.843V11.7L116.543%2014H109.623L107.323%2011.7Z'%20fill='%23242424'/%3e%3cpath%20d='M123.828%208.28L118.848%200H121.828L125.168%205.74H125.208L128.548%200H131.528L126.548%208.28V14H123.828V8.28Z'%20fill='%23242424'/%3e%3c/svg%3e"></use>
+      </svg>
+    </a>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item active">
+          <a class="nav-link {=$highlight-act}" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-curr}" href="../favorites.html">Favourites</a>
+        </li>
+      </ul>  
+    </nav>
+
+    <div class="socials-wrapper">
+      <article class="socials">
+    <div class="container">
+        <ul class="socials-list">
+            <li class="socials-item">
+                <a class="socials-link" href="https://www.facebook.com/goITclub/">
+                    <svg class="socials-icon" width="28" height="28">
+                        <use href="../img/socials-icons/facebook.svg"></use>
+                    </svg>    
+                </a>
+            </li>
+            <li class="socials-item">
+                <a class="socials-link" href="https://www.instagram.com/goitclub/">
+                    <svg class="socials-icon" width="28" height="28">
+                        <use href="../img/socials-icons/instagram.svg"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="socials-item">
+                <a class="socials-link" href="https://www.youtube.com/c/GoIT">
+                    <svg class="socials-icon" width="28" height="28">
+                        <use href="../img/socials-icons/youtube.svg"></use>
+                    </svg>    
+                </a>
+            </li>
+        </ul>
+</article>
+    </div>
+    
+    <button class="nav-toggle" aria-label="Toggle navigation menu">
+      <svg class="menu-icon" width="32" height="32">
+        <use href="../img/icon-pack/burger-icon.svg"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu-container">
+    <div class="nav-button-wrapper">
+      <button class="nav-close">
+        <svg class="close-icon" width="32" height="32">
+          <use href="../img/icon-pack/x.svg"></use>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item active">
+        <a class="mobile-nav-link {=$highlight-act}" href="/">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a class="mobile-nav-link {=$highlight-curr}" href="../favorites.html">Favourites</a>
+      </li>
+    </ul>
+
+    <article class="socials">
+    <div class="container">
+        <ul class="socials-list">
+            <li class="socials-item">
+                <a class="socials-link" href="https://www.facebook.com/goITclub/">
+                    <svg class="socials-icon" width="28" height="28">
+                        <use href="../img/socials-icons/facebook.svg"></use>
+                    </svg>    
+                </a>
+            </li>
+            <li class="socials-item">
+                <a class="socials-link" href="https://www.instagram.com/goitclub/">
+                    <svg class="socials-icon" width="28" height="28">
+                        <use href="../img/socials-icons/instagram.svg"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="socials-item">
+                <a class="socials-link" href="https://www.youtube.com/c/GoIT">
+                    <svg class="socials-icon" width="28" height="28">
+                        <use href="../img/socials-icons/youtube.svg"></use>
+                    </svg>    
+                </a>
+            </li>
+        </ul>
+</article>
+  </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-text-container">
+          <div class="hero-title-container">
+            <div class="hero-icon-wrapper">
+              <svg class="hero-icon" width="60" height="60">
+                <use href="data:image/svg+xml,%3csvg%20width='60'%20height='60'%20viewBox='0%200%2060%2060'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M26.7271%2025.3227L27.4083%2026.021L19.0348%202.02583L28.6289%2024.502L29.0121%2025.3997L29.0451%2024.4247L29.872%200L30.6989%2024.4242L30.732%2025.3997L31.115%2024.5024L40.7093%202.02583L32.6573%2025.0994L32.3357%2026.021L33.017%2025.3227L50.0829%207.82973L34.2395%2026.4365L33.6067%2027.1797L56.7269%2016.6278L35.2319%2028.2549L34.3734%2028.7193L35.3473%2028.6622L59.744%2027.2319L34.5321%2030.4318L58.7268%2038.2099L35.0087%2032.3213L34.0614%2032.0861L34.8196%2032.7L53.8125%2048.079L33.8233%2034.0201L33.0249%2033.4586L33.5101%2034.3049L45.665%2055.5065L32.1043%2035.176L31.5626%2034.364L35.3845%2059.4892L29.872%2034.68L24.3595%2059.4892L28.0346%2035.329L28.1814%2034.364L27.6401%2035.1756L14.0791%2055.5065L26.2337%2034.3054L26.7191%2033.4586L25.9212%2034.0198L5.93151%2048.079L24.9241%2032.7003L25.6827%2032.0861L24.7358%2032.3211L1.01726%2038.2099L24.2827%2030.7305L25.212%2030.4318L0%2027.2319L25.3707%2028.7193L24.5126%2028.2551L3.01713%2016.6278L26.1373%2027.1797L9.66116%207.82973L26.7271%2025.3227ZM28.471%2026.3835L27.2592%2027.1338L26.4002%2028.2712L26.0102%2029.6421L26.1417%2031.0614L26.777%2032.3373L27.8303%2033.2975L29.1594%2033.8124H30.5847L31.9137%2033.2975L32.9671%2032.3373L33.6024%2031.0614L33.7339%2029.6421L33.3438%2028.2712L32.4849%2027.1338L31.2731%2026.3835L29.872%2026.1216L28.471%2026.3835Z'%20fill='%23242424'/%3e%3c/svg%3e"></use>
+              </svg>  
+            </div>
+            
+            <h1 class="hero-title">Get <i>Body</i> in shape, Stay healthy</h1>
+          </div>
+          
+          <h2 class="hero-subheading">
+            Transform your physique and embrace a healthier lifestyle 
+            with our comprehensive fitness and nutrition support.
+          </h2>  
+        </div>
+        
+        <img src="/vanilla-app-template/assets/women-sportswear-working-out-outdoors-fNIUdBZb.jpg" 
+        srcset="/vanilla-app-template/assets/women-sportswear-working-out-outdoors@0.5x-CJLknZG4.jpg 0.5x, /vanilla-app-template/assets/women-sportswear-working-out-outdoors-fNIUdBZb.jpg 1x, /vanilla-app-template/assets/women-sportswear-working-out-outdoors@2x-DfjJW9sF.jpg 2x, /vanilla-app-template/assets/women-sportswear-working-out-outdoors@3x-BtVO9YLb.jpg 3x" 
+        height="460"
+        alt="Women sportswear working out outdoors" 
+        class="hero-image" />
+
+        <div class="hero-additional-container">
+          <img src="/vanilla-app-template/assets/young-women-doing-fitness-outdoors-together-BxdU_Wdc.jpg" 
+          srcset="/vanilla-app-template/assets/young-women-doing-fitness-outdoors-together@0.5x-CGtDfM52.jpg 0.5x, /vanilla-app-template/assets/young-women-doing-fitness-outdoors-together-BxdU_Wdc.jpg 1x, /vanilla-app-template/assets/young-women-doing-fitness-outdoors-together@2x-CoVr0QVt.jpg 2x, /vanilla-app-template/assets/young-women-doing-fitness-outdoors-together@3x-D0kvLFWg.jpg 3x" 
+          alt="Young women doing fitness outdoors together" 
+          width="168" 
+          height="100" 
+          class="tags-image">
+          <ul class="hero-tags-list">
+            <li class="hero-tags-item">#Sport</li>
+            <li class="hero-tags-item">#Healthy</li>
+            <li class="hero-tags-item">#Workout</li>
+            <li class="hero-tags-item">#Diet</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <div class="container">
+        <div class="exercises-navigation-wrapper">
+          <div class="main-heading-wrapper">
+            <h2 class="main-heading">Exercises /</h2>
+            <h3 class="category-heading">Waist</h3>  
+          </div>
+          
+          <div class="exercises-nav">
+            <div class="exercises-search">
+              <input type="text" class="exercises-search-input" placeholder="Search">
+              <svg class="search-delete-icon" width="18" height="18">
+                <use href="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.75%205.25L5.25%2012.75M5.25%205.25L12.75%2012.75'%20stroke='%23242424'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"></use>
+              </svg>
+              <svg class="search-icon" width="18" height="18">
+                <use href="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8.25%2014.25C11.5637%2014.25%2014.25%2011.5637%2014.25%208.25C14.25%204.93629%2011.5637%202.25%208.25%202.25C4.93629%202.25%202.25%204.93629%202.25%208.25C2.25%2011.5637%204.93629%2014.25%208.25%2014.25Z'%20stroke='%23242424'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M15.7498%2015.75L12.4873%2012.4875'%20stroke='%23242424'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"></use>
+              </svg>
+            </div>
+            <ul class="filter-tabs-list">
+              <li class="filter-tabs-item">Muscles</li>
+              <li class="filter-tabs-item">Body parts</li>
+              <li class="filter-tabs-item">Equipment</li>
+            </ul>   
+          </div>  
+        </div>
+        
+
+        <div class="main-order-wrapper">
+          <section class="motivation">
+            <div class="container">
+              <article class="motivation-quote">
+                <div class="motivation-quote-icon-wrapper">
+                  <svg class="motivation-quote-icon" width="20" height="20">
+                    <use href="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M18.5293%205.90673C18.2672%205.59374%2017.8004%205.55259%2017.4874%205.81359L15.4362%207.53667L14.4929%205.19953C14.4593%205.1118%2014.4084%205.03816%2014.3499%204.97318C14.1572%204.5443%2013.8225%204.17608%2013.3611%203.96272C13.1608%203.87175%2012.9539%203.82302%2012.7471%203.79919C12.7016%203.77536%2012.6604%203.74396%2012.6084%203.72771L8.99876%202.72159C8.79624%202.66636%208.59264%202.7021%208.42585%202.79957C8.22766%202.86672%208.05763%203.01076%207.9764%203.21978L6.61722%206.71466C6.46993%207.0948%206.65837%207.52367%207.03959%207.67313C7.41865%207.82042%207.8486%207.63089%207.99698%207.24967L9.14497%204.29846L10.789%204.75549C10.7489%204.82047%2010.7056%204.88112%2010.6731%204.95043L8.56556%209.51858C8.53523%209.58573%208.51899%209.65396%208.49733%209.72327L5.936%2014.0174L1.64944%2015.4513C1.16425%2015.8141%201.06136%2016.4975%201.41984%2016.9827C1.78048%2017.469%202.46603%2017.5719%202.95014%2017.2134L7.33634%2015.7026C7.47063%2015.6051%207.5681%2015.4773%207.64175%2015.3398C7.69698%2015.2813%207.7598%2015.2347%207.80204%2015.1622L9.32908%2012.6019L12.0399%2014.912L9.13956%2018.1805C8.73992%2018.6311%208.78%2019.3253%209.23269%2019.7238C9.68431%2020.1256%2010.3764%2020.0834%2010.7782%2019.6307L14.3976%2015.5531C14.5102%2015.4275%2014.5774%2015.2824%2014.6229%2015.1308C14.6499%2015.0484%2014.6499%2014.9629%2014.6564%2014.8773C14.6564%2014.834%2014.6727%2014.795%2014.6694%2014.7549C14.6597%2014.456%2014.5384%2014.1658%2014.2936%2013.9589L11.7994%2011.8319C11.9792%2011.6608%2012.1319%2011.4572%2012.2424%2011.2178L13.8582%207.71861L14.3759%209.09729C14.3976%209.21967%2014.4387%209.33988%2014.5254%209.4406C14.6034%209.53374%2014.703%209.59547%2014.8091%209.6388C14.82%209.64421%2014.833%209.64529%2014.846%209.64854C14.9131%209.67237%2014.9813%209.69511%2015.0517%209.69836C15.1351%209.70594%2015.2196%209.69511%2015.3051%209.67129C15.3073%209.6702%2015.3084%209.6702%2015.3084%209.6702C15.3311%209.66479%2015.3539%209.66912%2015.3766%209.65937C15.4968%209.61389%2015.5889%209.53699%2015.668%209.4471L18.6116%206.94859C18.9246%206.68542%2018.7924%206.21972%2018.5293%205.90673Z'%20fill='%23242424'/%3e%3cpath%20d='M14.8063%204.12628C15.9457%204.12628%2016.8694%203.20258%2016.8694%202.06314C16.8694%200.923699%2015.9457%200%2014.8063%200C13.6669%200%2012.7432%200.923699%2012.7432%202.06314C12.7432%203.20258%2013.6669%204.12628%2014.8063%204.12628Z'%20fill='%23242424'/%3e%3c/svg%3e"></use>
+                  </svg>
+                </div>
+                
+                <div class="motivation-quote-content">
+                  <div class="motivation-quote-header">
+                    <h2 class="motivation-title">Quote of the day</h2>
+                    <div class="quotes-wrapper">
+                      <svg class="quotes" width="20" height="20">
+                        <use href="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.15077%2013.1014C7.31014%2012.642%208.23983%2012.7623%208.93984%2013.4623C9.63984%2014.1623%209.84764%2015.2779%209.56326%2016.8092C9.34452%2017.9467%208.86328%2018.8217%208.11952%2019.4342C7.39764%2020.0248%206.55546%2020.3201%205.59296%2020.3201C4.28045%2020.3201%203.37265%2019.817%202.86952%2018.8107C2.3664%2017.7826%202.26796%2016.4045%202.57421%2014.6764C2.7492%2013.7357%203.03358%2012.7842%203.42732%2011.8217C3.82109%2010.8592%204.34609%209.87481%205.00232%208.86856C5.65858%207.86232%206.51171%206.9873%207.56171%206.24356C8.61171%205.4998%209.77108%205.01856%2011.0398%204.7998L10.7117%208.27792C9.63984%208.49668%208.68827%209.05449%207.85703%209.95137C7.02576%2010.8264%206.45701%2011.8764%206.15077%2013.1014ZM16.0273%2013.1014C17.1867%2012.642%2018.1164%2012.7623%2018.8164%2013.4623C19.5164%2014.1623%2019.7242%2015.2779%2019.4398%2016.8092C19.2211%2017.9467%2018.7398%2018.8217%2017.9961%2019.4342C17.2742%2020.0248%2016.432%2020.3201%2015.4695%2020.3201C14.157%2020.3201%2013.2492%2019.817%2012.7461%2018.8107C12.243%2017.7826%2012.1445%2016.4045%2012.4508%2014.6764C12.6258%2013.7357%2012.9102%2012.7842%2013.3039%2011.8217C13.6976%2010.8592%2014.2226%209.87481%2014.8789%208.86856C15.5352%207.86232%2016.3883%206.9873%2017.4383%206.24356C18.4883%205.4998%2019.6477%205.01856%2020.9164%204.7998L20.5883%208.27792C19.5164%208.49668%2018.5648%209.05449%2017.7336%209.95137C16.9023%2010.8264%2016.3336%2011.8764%2016.0273%2013.1014Z'%20fill='%23F4F4F4'/%3e%3c/svg%3e"></use>
+                      </svg>   
+                    </div>
+                     
+                  </div>
+                  <blockquote class="motivation-text">
+                    A lot of times I find that people who are blessed with the most 
+                    talent don't ever develop that attitude, and the ones who aren't 
+                    blessed in that way are the most competitive and have the biggest 
+                    heart.
+                  </blockquote>
+                  <cite class="motivation-author">Tom Brady</cite>
+                </div>
+              </article>
+
+              <div class="motivation-image-wrapper">
+                <img src="/vanilla-app-template/assets/women-sportswear-taking-break-from-workout-0YgK1YqD.jpg" 
+                srcset="/vanilla-app-template/assets/women-sportswear-taking-break-from-workout@0.5x-Q7Vva3lZ.jpg 0.5x, /vanilla-app-template/assets/women-sportswear-taking-break-from-workout-0YgK1YqD.jpg 1x, /vanilla-app-template/assets/women-sportswear-taking-break-from-workout@2x-8BLyBxgW.jpg 2x, /vanilla-app-template/assets/women-sportswear-taking-break-from-workout@3x-QZcKymh5.jpg 3x" 
+                alt="Women sportswear taking break from workout" 
+                class="motivation-image"
+                width="335" 
+                height="242">  
+              </div>
+              
+
+              <article class="motivation-fact">
+                <div class="motivation-fact-icon-wrapper">
+                  <svg class="motivation-fact-icon" width="20" height="20">
+                    <use href="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.6%205.71429H3.4C3.0675%205.71429%202.8%206.00089%202.8%206.35714V9.14286H2.2C2.09%209.14286%202%209.23929%202%209.35714V10.6429C2%2010.7607%202.09%2010.8571%202.2%2010.8571H2.8V13.6429C2.8%2013.9991%203.0675%2014.2857%203.4%2014.2857H4.6C4.9325%2014.2857%205.2%2013.9991%205.2%2013.6429V6.35714C5.2%206.00089%204.9325%205.71429%204.6%205.71429ZM17.8%209.14286H17.2V6.35714C17.2%206.00089%2016.9325%205.71429%2016.6%205.71429H15.4C15.0675%205.71429%2014.8%206.00089%2014.8%206.35714V13.6429C14.8%2013.9991%2015.0675%2014.2857%2015.4%2014.2857H16.6C16.9325%2014.2857%2017.2%2013.9991%2017.2%2013.6429V10.8571H17.8C17.91%2010.8571%2018%2010.7607%2018%2010.6429V9.35714C18%209.23929%2017.91%209.14286%2017.8%209.14286ZM13.4%204H12.2C11.8675%204%2011.6%204.28661%2011.6%204.64286V9.14286H8.4V4.64286C8.4%204.28661%208.1325%204%207.8%204H6.6C6.2675%204%206%204.28661%206%204.64286V15.3571C6%2015.7134%206.2675%2016%206.6%2016H7.8C8.1325%2016%208.4%2015.7134%208.4%2015.3571V10.8571H11.6V15.3571C11.6%2015.7134%2011.8675%2016%2012.2%2016H13.4C13.7325%2016%2014%2015.7134%2014%2015.3571V4.64286C14%204.28661%2013.7325%204%2013.4%204Z'%20fill='%23242424'/%3e%3c/svg%3e"></use>
+                  </svg>  
+                </div>
+                
+                <div class="motivation-fact-container">
+                  <p class="recomended-duration">110 min</p>
+                  <h2 class="motivation-fact-title">Daily  norm of sports</h2>
+                  <p class="motivation-fact-text">
+                    The World Health Organization recommends at least 150 minutes 
+                    of moderate-intensity aerobic physical activity throughout the 
+                    week for adults aged 18-64. However, what happens if we adjust 
+                    that number to 110 minutes every day? While it might seem like 
+                    a high number to hit, dedicating 110 minutes daily to sporting 
+                    activities may offer unparalleled benefits to physical health, 
+                    mental well-being, and overall quality of life.
+                  </p>  
+                </div>
+              </article>
+            </div>
+          </section>      
+
+          <section class="exercises">
+            <ul class="exercises-list">
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+
+              <li class="exercises-item">
+                <h4 class="exercise-heading">
+                  Abductors
+                </h4>
+                <h5 class="exercise-tip">
+                  Muscles
+                </h5>
+              </li>
+            </ul>
+
+            <div class="pagination">
+              <button class="pagination-button">Previous</button>
+              <span class="pagination-info">Page 1 of 10</span>
+              <button class="pagination-button">Next</button>
+            </div>
+          </section>
+            
+        </div>
+        
+        
+        
+      </div>
+    </main>
+
+    
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-wrapper">
+      <div class="footer-links">
+        <div class="logo">
+          <svg class="footer-logo-icon" width="132" height="14">
+            <use href="data:image/svg+xml,%3csvg%20width='132'%20height='14'%20viewBox='0%200%20132%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.98%208.28L0%200H2.98L6.32%205.74H6.36L9.7%200H12.68L7.7%208.28V14H4.98V8.28Z'%20fill='%23242424'/%3e%3cpath%20d='M12.6703%2011.7V2.3L14.9703%200H22.1703L24.4703%202.3V11.7L22.1703%2014H14.9703L12.6703%2011.7ZM20.7303%2011.68L21.7503%2010.66V3.34L20.7303%202.32H16.4103L15.3903%203.34V10.66L16.4103%2011.68H20.7303Z'%20fill='%23242424'/%3e%3cpath%20d='M26.3742%2011.6V0H29.0942V10.66L30.1142%2011.68H34.0342L35.0542%2010.66V0H37.7742V11.6L35.3742%2014H28.7742L26.3742%2011.6Z'%20fill='%23242424'/%3e%3cpath%20d='M50.8781%209.36V14H48.1581V9.98L46.9581%208.64H42.5981V14H39.8781V0H48.6581L50.7981%202.16V6.4L49.4381%207.78L50.8781%209.36ZM42.5981%206.4H47.4181L48.1181%205.7V2.98L47.4181%202.28H42.5981V6.4Z'%20fill='%23242424'/%3e%3cpath%20d='M57.8234%200H67.9434V2.3H60.5434V5.84H67.3634V8.1H60.5434V11.7H67.9434V14H57.8234V0Z'%20fill='%23242424'/%3e%3cpath%20d='M69.4523%200H71.8923L78.1323%209.5H78.1723V0H80.7923V14H78.3523L72.1123%204.52H72.0723V14H69.4523V0Z'%20fill='%23242424'/%3e%3cpath%20d='M82.8977%200H93.0177V2.3H85.6177V5.84H92.4377V8.1H85.6177V11.7H93.0177V14H82.8977V0Z'%20fill='%23242424'/%3e%3cpath%20d='M105.527%209.36V14H102.807V9.98L101.607%208.64H97.2466V14H94.5266V0H103.307L105.447%202.16V6.4L104.087%207.78L105.527%209.36ZM97.2466%206.4H102.067L102.767%205.7V2.98L102.067%202.28H97.2466V6.4Z'%20fill='%23242424'/%3e%3cpath%20d='M107.323%2011.7V2.3L109.623%200H116.583L118.843%202.26V4.4H116.123V3.26L115.183%202.32H111.063L110.043%203.34V10.66L111.063%2011.68H115.223L116.203%2010.7V8.52H113.203V6.2H118.843V11.7L116.543%2014H109.623L107.323%2011.7Z'%20fill='%23242424'/%3e%3cpath%20d='M123.828%208.28L118.848%200H121.828L125.168%205.74H125.208L128.548%200H131.528L126.548%208.28V14H123.828V8.28Z'%20fill='%23242424'/%3e%3c/svg%3e"></use>
+          </svg>
+        </div>
+        <article class="socials">
+    <div class="container">
+        <ul class="socials-list">
+            <li class="socials-item">
+                <a class="socials-link" href="https://www.facebook.com/goITclub/">
+                    <svg class="socials-icon" width="28" height="28">
+                        <use href="../img/socials-icons/facebook.svg"></use>
+                    </svg>    
+                </a>
+            </li>
+            <li class="socials-item">
+                <a class="socials-link" href="https://www.instagram.com/goitclub/">
+                    <svg class="socials-icon" width="28" height="28">
+                        <use href="../img/socials-icons/instagram.svg"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="socials-item">
+                <a class="socials-link" href="https://www.youtube.com/c/GoIT">
+                    <svg class="socials-icon" width="28" height="28">
+                        <use href="../img/socials-icons/youtube.svg"></use>
+                    </svg>    
+                </a>
+            </li>
+        </ul>
+</article>
+      </div>
+
+      <article class="footer-main-content">
+        <h2 class="footer-title">
+          Transforming your <i>body</i> shape with us
+        </h2>
+        <div class="footer-subscription-form">
+          <h3 class="form-call-to-action">Subscribe and learn about new exercises!</h3>
+          <form class="subscription-form">
+            <input
+              type="email"
+              class="subscription-input"
+              placeholder="Email"
+              required
+            />
+            <button type="submit" class="subscription-button">Send</button>
+        </div>  
+      </article>  
+    </div>
+    
+    <div class="footer-copyright-container">
+      <p class="footer-copyright">
+        Your Energy. All rights reserved.
+      </p>
+      <div class="copyright-wrapper">
+        <div class="footer-copyright">
+          <a href="" class="footer-copyright-link">Privacy Policy</a>
+          <span class="footer-copyright-devider">/</span>
+          <a href="" class="footer-copyright-link">Terms of Service</a>
+        </div>
+        <p class="footer-copyright">
+          &copy;2026
+        </p>  
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
