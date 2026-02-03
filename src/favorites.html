@@ -16,6 +16,7 @@
     />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <load
       src="partials/header.html"
       icon-path="logo.svg"
@@ -30,7 +31,12 @@
           <div class="container">
             <article class="motivation-quote">
               <div class="motivation-quote-icon-wrapper">
-                <svg class="motivation-quote-icon" width="20" height="20">
+                <svg
+                  class="motivation-quote-icon"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                >
                   <use href="icon-pack/running-icon.svg"></use>
                 </svg>
               </div>
@@ -39,7 +45,12 @@
                 <div class="motivation-quote-header">
                   <h2 class="motivation-title">Quote of the day</h2>
                   <div class="quotes-wrapper">
-                    <svg class="quotes" width="20" height="20">
+                    <svg
+                      class="quotes"
+                      width="20"
+                      height="20"
+                      aria-hidden="true"
+                    >
                       <use href="icon-pack/quotes.svg"></use>
                     </svg>
                   </div>
@@ -69,7 +80,12 @@
             </div>
 
             <article class="motivation-fact">
-              <svg class="motivation-fact-icon" width="20" height="20">
+              <svg
+                class="motivation-fact-icon"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              >
                 <use href="icon-pack/dumbbell-icon.svg"></use>
               </svg>
 
@@ -81,7 +97,7 @@
           </div>
         </section>
 
-        <main>
+        <main id="main-content">
           <div class="container">
             <ul class="favorite-exercises-list">
               <p class="favorites-placeholder">

@@ -15,6 +15,7 @@
     />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <load src="partials/header.html" icon-path="logo.svg" />
 
     <!-- Hero Section -->
@@ -23,7 +24,7 @@
         <div class="hero-text-container">
           <div class="hero-title-container">
             <div class="hero-icon-wrapper">
-              <svg class="hero-icon" width="60" height="60">
+              <svg class="hero-icon" width="60" height="60" aria-hidden="true">
                 <use href="icon-pack/sun.svg"></use>
               </svg>
             </div>
@@ -75,7 +76,7 @@
       </div>
     </section>
 
-    <main>
+    <main id="main-content">
       <div class="container">
         <div class="exercises-navigation-wrapper">
           <div class="main-heading-wrapper">
@@ -85,18 +86,26 @@
 
           <div class="exercises-nav">
             <form class="exercises-search">
+              <label for="exercise-search" class="visually-hidden"
+                >Search exercises</label
+              >
               <input
                 type="text"
+                id="exercise-search"
                 class="exercises-search-input"
                 placeholder="Search"
               />
-              <button type="reset" class="search-delete-icon">
-                <svg width="18" height="18">
+              <button
+                type="reset"
+                class="search-delete-icon"
+                aria-label="Clear search"
+              >
+                <svg width="18" height="18" aria-hidden="true">
                   <use href="search-icons/x.svg"></use>
                 </svg>
               </button>
-              <button class="search-icon" type="submit">
-                <svg width="18" height="18">
+              <button class="search-icon" type="submit" aria-label="Search">
+                <svg width="18" height="18" aria-hidden="true">
                   <use href="search-icons/search.svg"></use>
                 </svg>
               </button>
@@ -114,7 +123,12 @@
             <div class="container">
               <article class="motivation-quote">
                 <div class="motivation-quote-icon-wrapper">
-                  <svg class="motivation-quote-icon" width="20" height="20">
+                  <svg
+                    class="motivation-quote-icon"
+                    width="20"
+                    height="20"
+                    aria-hidden="true"
+                  >
                     <use href="icon-pack/running-icon.svg"></use>
                   </svg>
                 </div>
@@ -123,7 +137,12 @@
                   <div class="motivation-quote-header">
                     <h2 class="motivation-title">Quote of the day</h2>
                     <div class="quotes-wrapper">
-                      <svg class="quotes" width="20" height="20">
+                      <svg
+                        class="quotes"
+                        width="20"
+                        height="20"
+                        aria-hidden="true"
+                      >
                         <use href="icon-pack/quotes.svg"></use>
                       </svg>
                     </div>
@@ -157,7 +176,12 @@
 
               <article class="motivation-fact">
                 <div class="motivation-fact-icon-wrapper">
-                  <svg class="motivation-fact-icon" width="20" height="20">
+                  <svg
+                    class="motivation-fact-icon"
+                    width="20"
+                    height="20"
+                    aria-hidden="true"
+                  >
                     <use href="icon-pack/dumbbell-icon.svg"></use>
                   </svg>
                 </div>
@@ -183,48 +207,48 @@
           <section class="exercises">
             <ul class="exercises-list">
               <li class="exercises-item">
-                <h4 class="exercise-heading">Abductors</h4>
-                <h5 class="exercise-tip">Muscles</h5>
+                <h3 class="exercise-heading">Abductors</h3>
+                <h4 class="exercise-tip">Muscles</h4>
               </li>
 
               <li class="exercises-item">
-                <h4 class="exercise-heading">Abductors</h4>
-                <h5 class="exercise-tip">Muscles</h5>
+                <h3 class="exercise-heading">Abductors</h3>
+                <h4 class="exercise-tip">Muscles</h4>
               </li>
 
               <li class="exercises-item">
-                <h4 class="exercise-heading">Abductors</h4>
-                <h5 class="exercise-tip">Muscles</h5>
+                <h3 class="exercise-heading">Abductors</h3>
+                <h4 class="exercise-tip">Muscles</h4>
               </li>
 
               <li class="exercises-item">
-                <h4 class="exercise-heading">Abductors</h4>
-                <h5 class="exercise-tip">Muscles</h5>
+                <h3 class="exercise-heading">Abductors</h3>
+                <h4 class="exercise-tip">Muscles</h4>
               </li>
 
               <li class="exercises-item">
-                <h4 class="exercise-heading">Abductors</h4>
-                <h5 class="exercise-tip">Muscles</h5>
+                <h3 class="exercise-heading">Abductors</h3>
+                <h4 class="exercise-tip">Muscles</h4>
               </li>
 
               <li class="exercises-item">
-                <h4 class="exercise-heading">Abductors</h4>
-                <h5 class="exercise-tip">Muscles</h5>
+                <h3 class="exercise-heading">Abductors</h3>
+                <h4 class="exercise-tip">Muscles</h4>
               </li>
 
               <li class="exercises-item">
-                <h4 class="exercise-heading">Abductors</h4>
-                <h5 class="exercise-tip">Muscles</h5>
+                <h3 class="exercise-heading">Abductors</h3>
+                <h4 class="exercise-tip">Muscles</h4>
               </li>
 
               <li class="exercises-item">
-                <h4 class="exercise-heading">Abductors</h4>
-                <h5 class="exercise-tip">Muscles</h5>
+                <h3 class="exercise-heading">Abductors</h3>
+                <h4 class="exercise-tip">Muscles</h4>
               </li>
 
               <li class="exercises-item">
-                <h4 class="exercise-heading">Abductors</h4>
-                <h5 class="exercise-tip">Muscles</h5>
+                <h3 class="exercise-heading">Abductors</h3>
+                <h4 class="exercise-tip">Muscles</h4>
               </li>
             </ul>
 

@@ -3,7 +3,12 @@
     <div class="footer-wrapper">
       <div class="footer-links">
         <div class="logo">
-          <svg class="footer-logo-icon" width="132" height="14">
+          <svg
+            class="footer-logo-icon"
+            width="132"
+            height="14"
+            aria-hidden="true"
+          >
             <use href="{=$icon-path}"></use>
           </svg>
         </div>
@@ -20,8 +25,12 @@
             Subscribe and learn about new exercises!
           </h3>
           <form class="subscription-form">
+            <label for="subscription-email" class="visually-hidden"
+              >Email for subscription</label
+            >
             <input
               type="email"
+              id="subscription-email"
               class="subscription-input"
               placeholder="Email"
               required

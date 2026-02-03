@@ -9,7 +9,12 @@
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-item active">
-          <a class="nav-link {=$highlight-act}" href="index.html">Home</a>
+          <a
+            class="nav-link {=$highlight-act}"
+            href="index.html"
+            aria-current="page"
+            >Home</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link {=$highlight-curr}" href="favorites.html"
@@ -23,17 +28,22 @@
       <load src="partials/socials.html" />
     </div>
 
-    <button class="nav-toggle" aria-label="Toggle navigation menu">
-      <svg class="menu-icon" width="32" height="32">
+    <button
+      class="nav-toggle"
+      aria-label="Toggle navigation menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <svg class="menu-icon" width="32" height="32" aria-hidden="true">
         <use href="icon-pack/burger-icon.svg"></use>
       </svg>
     </button>
   </div>
 
-  <div class="mobile-menu-container">
+  <div class="mobile-menu-container" id="mobile-menu">
     <div class="nav-button-wrapper">
-      <button class="nav-close">
-        <svg class="close-icon" width="32" height="32">
+      <button class="nav-close" aria-label="Close navigation menu">
+        <svg class="close-icon" width="32" height="32" aria-hidden="true">
           <use href="icon-pack/x.svg"></use>
         </svg>
       </button>
@@ -44,7 +54,10 @@
         <a class="mobile-nav-link {=$highlight-act}" href="index.html">Home</a>
       </li>
       <li class="mobile-nav-item">
-        <a class="mobile-nav-link {=$highlight-curr}" href="favorites.html"
+        <a
+          class="mobile-nav-link {=$highlight-curr}"
+          href="favorites.html"
+          aria-current="page"
           >Favourites</a
         >
       </li>
