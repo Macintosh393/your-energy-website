@@ -25,7 +25,8 @@ footer > .container {
 }
 
 .footer-logo-icon {
-  filter: invert(100%) sepia(55%) saturate(1872%) hue-rotate(184deg) brightness(121%) contrast(91%);
+  filter: invert(100%) sepia(55%) saturate(1872%) hue-rotate(184deg)
+    brightness(121%) contrast(91%);
 }
 
 .footer-title {
@@ -77,10 +78,10 @@ footer > .container {
 
   background: none;
   border-radius: 30px;
-  border: 1px solid #F4F4F4;
+  border: 1px solid #f4f4f4;
 
   &::placeholder {
-    color: #F4F4F460;
+    color: #f4f4f460;
   }
 }
 
@@ -94,11 +95,10 @@ footer > .container {
   height: 42px;
   padding: 0 15px;
 
-  background: #F4F4F4;
+  background: #f4f4f4;
   border-radius: 30px;
-  border: 1px solid #F4F4F4;
+  border: 1px solid #f4f4f4;
 }
-
 
 .footer-copyright-container {
   font-weight: 400;
@@ -106,7 +106,7 @@ footer > .container {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: -2%;
-  color: #C6CDD1;
+  color: #c6cdd1;
 
   display: flex;
   flex-direction: column;
@@ -172,7 +172,7 @@ footer > .container {
   .footer-main-content {
     flex-direction: row;
     width: auto;
-    max-width:fit-content;
+    max-width: fit-content;
     gap: 115px;
   }
 

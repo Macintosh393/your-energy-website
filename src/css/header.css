@@ -119,7 +119,6 @@ header {
   padding: 10px;
 }
 
-
 @media screen and (min-width: 768px) {
   .nav {
     display: block;
@@ -135,5 +134,4 @@ header {
 }
 
 @media screen and (min-width: 1440px) {
-
 }
