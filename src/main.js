@@ -1,4 +1,4 @@
-import Pagination from './js/pagination.js';
+import Pagination from './pagination.js';
 
 const pagination = new Pagination();
 const pagFirstBut = document.querySelector('.pagination-first-button');
