@@ -114,6 +114,7 @@ main > .container {
 }
 
 .main-order-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -175,7 +176,10 @@ main > .container {
 
 .filter-tabs-item {
   padding-bottom: 8px;
+  padding: 8px 0;
   position: relative;
+  border: none;
+  background: none;
 }
 
 .filter-tabs-item.active::after {
@@ -228,6 +232,7 @@ main > .container {
 .motivation-quote-content {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .motivation-quote-header {
@@ -351,39 +356,54 @@ main > .container {
   overflow: hidden;
 }
 
-.exercises {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
   margin-bottom: 80px;
+  width: 100%;
 }
 
-.exercises-list {
+.content-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
   gap: 20px;
 }
 
-.exercises-item {
+.filter-tile {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 
-  background-image: url('../img/tags-image/young-women-doing-fitness-outdoors-together@3x.jpg');
-  object-fit: cover;
-  background-repeat: no-repeat;
-  width: 335px;
+  width: 100%;
+  max-width: 335px;
   height: 225px;
+  overflow: hidden;
+  padding: 20px;
+
+  background-color: #11111170;
 
   border-radius: 12px;
 }
 
-.exercise-heading {
+.filter-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.filter-name {
   text-align: center;
   font-weight: 400;
   font-size: 20px;
@@ -393,7 +413,7 @@ main > .container {
   color: #f4f4f4;
 }
 
-.exercise-tip {
+.filter-category {
   text-align: center;
   font-weight: 400;
   font-size: 12px;
@@ -481,13 +501,13 @@ main > .container {
     width: 273px;
   }
 
-  .exercises-list {
+  .content-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px 15px;
   }
 
-  .exercises-item {
+  .filter-tile {
     max-width: 225px;
     flex-grow: 1;
   }
@@ -591,7 +611,7 @@ main > .container {
     order: 2;
   }
 
-  .exercises-item {
+  .filter-tile {
     max-width: 290px;
     height: 242px;
   }
@@ -599,6 +619,14 @@ main > .container {
   /* Motivation */
   .motivation {
     order: 1;
+  }
+
+  .motivation > .container {
+    width: 444px;
+  }
+
+  .content {
+    order: 2;
   }
 
   .motivation-quote {
