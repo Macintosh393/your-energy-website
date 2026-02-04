@@ -345,6 +345,7 @@ main > .container {
   margin-top: 16px;
   display: -webkit-box;
   max-width: 100%;
+  line-clamp: 5;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
