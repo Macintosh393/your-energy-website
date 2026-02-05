@@ -42,6 +42,11 @@ export async function getExercises(keyword = '') {
   return res.data.results;
 }
 
+export async function getExercise(id) {
+  const res = await axios.get(`/exercises/${id}`);
+  return res.data;
+}
+
 export async function getQuote() {
   const res = await axios.get('/quote');
   return res.data;

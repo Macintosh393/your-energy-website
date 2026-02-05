@@ -8,6 +8,8 @@ import { addFilterHandlers } from './handlers/filter-handler.js';
 import { setQuote } from './utility/set-quote.js';
 import { addSubscriptionFormHandler } from './handlers/subscription-form-handler.js';
 import { addSearchHandler } from './handlers/search-handler.js';
+import { addExerciseDetailsHandler } from './handlers/exercise-details-handler.js';
+import { addModalHandlers } from './handlers/modal-handler.js';
 
 function initNavigation() {
   let url = window.location;
@@ -44,6 +46,9 @@ async function initHomePage() {
   setQuote();
 
   addPaginationHandler();
+
+  addModalHandlers();
+  addExerciseDetailsHandler();
 
   const subscriptionForm = document.querySelector('.subscription-form');
   addSubscriptionFormHandler(subscriptionForm);

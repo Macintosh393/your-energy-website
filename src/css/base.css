@@ -21,6 +21,10 @@ body {
   min-height: 100vh;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 svg {
   padding: 0;
   margin: 0;
