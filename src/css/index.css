@@ -504,6 +504,7 @@ main > .container {
 
   .content-list {
     flex-direction: row;
+    justify-content: start;
     flex-wrap: wrap;
     gap: 32px 15px;
   }
@@ -608,6 +609,7 @@ main > .container {
 
   .main-order-wrapper {
     flex-direction: row;
+    gap: 32px;
   }
 
   .exercises {

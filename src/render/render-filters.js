@@ -7,7 +7,7 @@ const contentList = document.querySelector('.content-list');
 export async function renderFilters() {
   const data = (await getContentByFilter(state.filter))
     .map(el => {
-      return `<li class="filter-tile">
+      return `<li class="filter-tile" data-value="${el.name}">
             <img src="${el.imgURL}" class="filter-image" alt="${el.name}"/>
             <h3 class="filter-name">${capitalize(el.name)}</h3>
             <p class="filter-category">${el.filter}</p>
