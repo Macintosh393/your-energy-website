@@ -9,17 +9,26 @@ import { setQuote } from './utility/set-quote.js';
 import { addSubscriptionFormHandler } from './handlers/subscription-form-handler.js';
 import { addSearchHandler } from './handlers/search-handler.js';
 
-let url = window.location;
-const pathIndex = url.pathname.lastIndexOf('/') + 1;
-document
-  .querySelector('a[href="' + url.pathname.slice(pathIndex) + '"]')
-  .parentNode.classList.add('active');
+function initNavigation() {
+  let url = window.location;
+  const navList = document.querySelector('.nav-list');
+  const pathIndex = url.pathname.lastIndexOf('/') + 1;
+  navList
+    .querySelector('a[href="' + url.pathname.slice(pathIndex) + '"]')
+    .parentNode.classList.add('active');
+
+  if (url.pathname.slice(pathIndex) === 'index.html') {
+    initHomePage();
+  } else {
+    initFavoritesPage();
+  }
+}
 
 async function initHomePage() {
   const burgerButton = document.querySelector('.nav-toggle');
   const closeButton = document.querySelector('.nav-close');
-  const mobileMenu = document.querySelector('#mobile-menu');
-  addMenuHandlers(burgerButton, closeButton, mobileMenu);
+  const mobileMenuBackdrop = document.querySelector('.mobile-menu-backdrop');
+  addMenuHandlers(burgerButton, closeButton, mobileMenuBackdrop);
 
   const filterTabsList = document.querySelector('.filter-tabs-list');
   const contentList = document.querySelector('.content-list');
@@ -40,6 +49,6 @@ async function initHomePage() {
   addSubscriptionFormHandler(subscriptionForm);
 }
 
-if (url.pathname.slice(pathIndex) === 'index.html') {
-  initHomePage();
-}
+async function initFavoritesPage() {}
+
+initNavigation();

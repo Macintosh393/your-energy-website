@@ -469,6 +469,7 @@ main > .container {
     font-size: 18px;
     line-height: 24px;
 
+    max-width: 528px;
     margin-bottom: 32px;
   }
 
@@ -604,10 +605,6 @@ main > .container {
   .hero-tags-list {
     max-width: 197px;
     margin: 0;
-  }
-
-  .hero-subheading {
-    max-width: 528px;
   }
 
   /* Main */

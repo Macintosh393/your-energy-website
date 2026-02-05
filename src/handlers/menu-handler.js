@@ -1,9 +1,13 @@
-export function addMenuHandlers(burgerButton, closeButton, mobileMenu) {
+export function addMenuHandlers(burgerButton, closeButton, mobileMenuBackdrop) {
   burgerButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('opened');
+    mobileMenuBackdrop.classList.add('opened');
   });
 
   closeButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('opened');
+    mobileMenuBackdrop.classList.remove('opened');
+  });
+
+  mobileMenuBackdrop.addEventListener('click', () => {
+    mobileMenuBackdrop.classList.remove('opened');
   });
 }
