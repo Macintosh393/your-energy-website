@@ -40,3 +40,8 @@ export async function getExercises(keyword = null) {
   }
   return res.data.results;
 }
+
+export async function getQuote() {
+  const res = await axios.get('/quote');
+  return res.data;
+}

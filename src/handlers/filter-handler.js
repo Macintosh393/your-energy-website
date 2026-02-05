@@ -1,7 +1,7 @@
 import { renderExercises } from '../render/render-exercises';
 import { state } from '../state/state';
-import Pagination from '../service/pagination';
-import { capitalize } from '../service/capitalize';
+import Pagination from '../utility/pagination';
+import { capitalize } from '../utility/capitalize';
 const mainHeading = document.querySelector('.main-heading');
 const categoryHeading = document.querySelector('.category-heading');
 const exercisesSearch = document.querySelector('.exercises-search');

@@ -1,5 +1,5 @@
 import { getContentByFilter } from '../api/your-energy-api';
-import { capitalize } from '../service/capitalize';
+import { capitalize } from '../utility/capitalize';
 import { state } from '../state/state';
 import { renderPagination } from './render-pagination';
 const contentList = document.querySelector('.content-list');
