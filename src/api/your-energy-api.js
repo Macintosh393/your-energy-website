@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { state } from '../state/state';
+import iziToast from 'izitoast';
 
 axios.defaults.baseURL = 'https://your-energy.b.goit.study/api';
 
@@ -13,13 +14,13 @@ export async function getContentByFilter() {
   return res.data.results;
 }
 
-export async function getExercises(keyword = null) {
+export async function getExercises(keyword = '') {
   const params = new URLSearchParams({
     page: state.pagination.page,
     limit: state.pagination.perPage,
   });
 
-  if (keyword != null) {
+  if (keyword != '') {
     params.set('keyword', keyword);
   }
 
@@ -44,4 +45,21 @@ export async function getExercises(keyword = null) {
 export async function getQuote() {
   const res = await axios.get('/quote');
   return res.data;
+}
+
+export async function subscribe(email) {
+  try {
+    await axios.post('/subscription', { email: email });
+    iziToast.success({
+      title: 'Success',
+      message: 'You are now subscribed',
+      position: 'bottomCenter',
+    });
+  } catch (e) {
+    iziToast.error({
+      title: 'Error',
+      message: "Couldn't subscribe. Email might already registered",
+      position: 'bottomCenter',
+    });
+  }
 }

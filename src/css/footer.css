@@ -22,6 +22,7 @@ footer > .container {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-top: 15px;
 }
 
 .footer-logo-icon {
@@ -80,9 +81,14 @@ footer > .container {
   background: none;
   border-radius: 30px;
   border: 1px solid #f4f4f4;
+  color: #f4f4f4;
 
   &::placeholder {
     color: #f4f4f460;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
@@ -99,6 +105,14 @@ footer > .container {
   background: #f4f4f4;
   border-radius: 30px;
   border: 1px solid #f4f4f4;
+
+  transition: background-color 0.17s ease-in-out;
+  transition: color 0.17s ease-in-out;
+
+  &:hover {
+    background-color: #242424;
+    color: #f4f4f4;
+  }
 }
 
 .footer-copyright-container {
@@ -133,6 +147,10 @@ footer > .container {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 40px;
+  }
+
+  .footer-links {
+    margin-top: 0;
   }
 
   .footer-main-content {

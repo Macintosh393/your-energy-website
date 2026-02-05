@@ -4,11 +4,11 @@ import { state } from '../state/state';
 import { renderPagination } from './render-pagination';
 const contentList = document.querySelector('.content-list');
 
-export async function renderExercises() {
-  const data = (await getExercises())
+export async function renderExercises(keyword = '') {
+  const data = (await getExercises(keyword))
     .map(el => {
       return `
-      <li class="exercise" data-id="${el._id}">
+      <li class="exercise">
         <div class="exercise-line-wrapper">
             <span class="workout">workout</span>
             <div class="rating">
@@ -17,7 +17,7 @@ export async function renderExercises() {
                     <use href="icon-pack/star-icon.svg"></use>
                 </svg>
             </div>
-            <button class="start-button" aria-label="Start exercise">
+            <button class="start-button" data-id="${el._id}" aria-label="Start exercise">
                 Start
                 <svg class="start-arrow" width="16" height="16">
                     <use href="icon-pack/start-arrow.svg"></use>

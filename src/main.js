@@ -6,6 +6,8 @@ import { state } from './state/state.js';
 import { addMenuHandlers } from './handlers/menu-handler.js';
 import { addFilterHandlers } from './handlers/filter-handler.js';
 import { setQuote } from './utility/set-quote.js';
+import { addSubscriptionFormHandler } from './handlers/subscription-form-handler.js';
+import { addSearchHandler } from './handlers/search-handler.js';
 
 let url = window.location;
 const pathIndex = url.pathname.lastIndexOf('/') + 1;
@@ -23,6 +25,9 @@ async function initHomePage() {
   const contentList = document.querySelector('.content-list');
   addFilterTabsHandler(filterTabsList);
 
+  const searchForm = document.querySelector('.exercises-search');
+  addSearchHandler(searchForm);
+
   state.pagination = new Pagination('filters');
   renderFilters('Muscles');
   addFilterHandlers(contentList);
@@ -30,6 +35,9 @@ async function initHomePage() {
   setQuote();
 
   addPaginationHandler();
+
+  const subscriptionForm = document.querySelector('.subscription-form');
+  addSubscriptionFormHandler(subscriptionForm);
 }
 
 if (url.pathname.slice(pathIndex) === 'index.html') {
