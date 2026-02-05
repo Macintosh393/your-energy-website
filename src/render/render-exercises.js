@@ -5,7 +5,7 @@ import { renderPagination } from './render-pagination';
 const contentList = document.querySelector('.content-list');
 
 export async function renderExercises() {
-  const data = (await getExercises(state.filterValue))
+  const data = (await getExercises())
     .map(el => {
       return `
       <li class="exercise" data-id="${el._id}">

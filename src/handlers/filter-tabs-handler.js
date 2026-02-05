@@ -1,6 +1,9 @@
 import { renderFilters } from '../render/render-filters';
 import { state } from '../state/state';
 import Pagination from '../service/pagination';
+const mainHeading = document.querySelector('.main-heading');
+const categoryHeading = document.querySelector('.category-heading');
+const exercisesSearch = document.querySelector('.exercises-search');
 
 export function addFilterTabsHandler(filterTabsList) {
   filterTabsList.addEventListener('click', event => {
@@ -8,6 +11,9 @@ export function addFilterTabsHandler(filterTabsList) {
     if (!btn) return;
 
     state.pagination = new Pagination('filters');
+    mainHeading.innerHTML = 'Exercises';
+    categoryHeading.style.display = 'none';
+    exercisesSearch.style.display = 'none';
 
     document
       .querySelectorAll('.filter-tabs-item')

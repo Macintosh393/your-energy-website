@@ -6,6 +6,11 @@ import { state } from './state/state.js';
 import { addMenuHandlers } from './handlers/menu-handler.js';
 import { addFilterHandlers } from './handlers/filter-handler.js';
 
+let url = window.location;
+document
+  .querySelector('a[href="' + url.pathname.slice(1) + '"]')
+  .parentNode.classList.add('active');
+
 async function initHomePage() {
   const burgerButton = document.querySelector('.nav-toggle');
   const closeButton = document.querySelector('.nav-close');
@@ -23,4 +28,6 @@ async function initHomePage() {
   addPaginationHandler();
 }
 
-initHomePage();
+if (url.pathname === '/index.html') {
+  initHomePage();
+}

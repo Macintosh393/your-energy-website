@@ -1,6 +1,10 @@
 import { renderExercises } from '../render/render-exercises';
 import { state } from '../state/state';
 import Pagination from '../service/pagination';
+import { capitalize } from '../service/capitalize';
+const mainHeading = document.querySelector('.main-heading');
+const categoryHeading = document.querySelector('.category-heading');
+const exercisesSearch = document.querySelector('.exercises-search');
 
 export function addFilterHandlers(contentList) {
   contentList.addEventListener('click', event => {
@@ -8,8 +12,12 @@ export function addFilterHandlers(contentList) {
     if (!filterTile) return;
 
     state.pagination = new Pagination('exercises');
+    mainHeading.innerHTML = 'Exercises /';
+    categoryHeading.innerHTML = capitalize(filterTile.dataset.value);
+    categoryHeading.style.display = 'block';
+    exercisesSearch.style.display = 'flex';
 
     state.filterValue = filterTile.dataset.value;
-    renderExercises(state.filterValue);
+    renderExercises();
   });
 }

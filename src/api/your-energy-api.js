@@ -13,20 +13,25 @@ export async function getContentByFilter() {
   return res.data.results;
 }
 
-export async function getExercises(filterValue) {
+export async function getExercises(keyword = null) {
   const params = new URLSearchParams({
     page: state.pagination.page,
     limit: state.pagination.perPage,
   });
+
+  if (keyword != null) {
+    params.set('keyword', keyword);
+  }
+
   switch (state.filter) {
     case 'Muscles':
-      params.set('muscles', filterValue);
+      params.set('muscles', state.filterValue);
       break;
     case 'Body parts':
-      params.set('bodypart', filterValue);
+      params.set('bodypart', state.filterValue);
       break;
     case 'Equipment':
-      params.set('equipment', filterValue);
+      params.set('equipment', state.filterValue);
   }
 
   const res = await axios.get(`/exercises?${params}`);
