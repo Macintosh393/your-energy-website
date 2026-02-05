@@ -8,8 +8,9 @@ import { addFilterHandlers } from './handlers/filter-handler.js';
 import { setQuote } from './utility/set-quote.js';
 
 let url = window.location;
+const pathIndex = url.pathname.lastIndexOf('/') + 1;
 document
-  .querySelector('a[href="' + url.pathname.slice(1) + '"]')
+  .querySelector('a[href="' + url.pathname.slice(pathIndex) + '"]')
   .parentNode.classList.add('active');
 
 async function initHomePage() {
@@ -31,6 +32,6 @@ async function initHomePage() {
   addPaginationHandler();
 }
 
-if (url.pathname === '/index.html') {
+if (url.pathname.slice(pathIndex) === 'index.html') {
   initHomePage();
 }
