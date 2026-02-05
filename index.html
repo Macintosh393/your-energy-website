@@ -2,18 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/your-energy-website/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Looking for new workouts? Your Energy offers a searchable library of exercises filtered by body part, muscle group, and equipment. Stay motivated with daily quotes and expert advice on physical health and nutrition."
+    />
     <title>Your Energy</title>
+    <link rel="icon" type="image/svg+xml" href="/your-energy-website/favicon.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
+      fetchpriority="high"
     />
     <script type="module" crossorigin src="/your-energy-website/assets/vendor-CLb_lYsF.js"></script>
-    <script type="module" crossorigin src="/your-energy-website/assets/main-G4WcTFo-.js"></script>
+    <script type="module" crossorigin src="/your-energy-website/assets/main-DS5H4P6J.js"></script>
     <link rel="stylesheet" crossorigin href="/your-energy-website/assets/main-CQYlVLsc.css">
   </head>
   <body>
@@ -198,6 +203,8 @@
           alt="Women sportswear working out outdoors"
           class="hero-image"
           loading="eager"
+          rel="preload"
+          fetchpriority="high"
         />
 
         <div class="hero-additional-container">
@@ -256,17 +263,29 @@
             </form>
             <ul class="filter-tabs-list">
               <li>
-                <button class="filter-tabs-item active" data-filter="Muscles">
+                <button
+                  class="filter-tabs-item active"
+                  aria-label="Filtering category Muscles"
+                  data-filter="Muscles"
+                >
                   Muscles
                 </button>
               </li>
               <li>
-                <button class="filter-tabs-item" data-filter="Body parts">
+                <button
+                  class="filter-tabs-item"
+                  aria-label="Filtering category Body parts"
+                  data-filter="Body parts"
+                >
                   Body parts
                 </button>
               </li>
               <li>
-                <button class="filter-tabs-item" data-filter="Equipment">
+                <button
+                  class="filter-tabs-item"
+                  aria-label="Filtering category Equipment"
+                  data-filter="Equipment"
+                >
                   Equipment
                 </button>
               </li>
@@ -362,7 +381,7 @@
 
             <div class="pagination">
               <div class="pagination-back-wrapper">
-                <button class="pagination-first-button">
+                <button class="pagination-first-button" aria-label="First page">
                   <svg
                     class="pagination-arrow back"
                     aria-hidden="true"
@@ -380,7 +399,10 @@
                     <use href="icon-pack/pagination-arrow.svg"></use>
                   </svg>
                 </button>
-                <button class="pagination-previous-button">
+                <button
+                  class="pagination-previous-button"
+                  aria-label="Previous page"
+                >
                   <svg
                     class="pagination-arrow back"
                     aria-hidden="true"
@@ -393,7 +415,7 @@
               </div>
               <ul class="pagination-pages"></ul>
               <div class="pagination-next-wrapper">
-                <button class="pagination-next-button">
+                <button class="pagination-next-button" aria-label="Next page">
                   <svg
                     class="pagination-arrow"
                     aria-hidden="true"
@@ -403,7 +425,7 @@
                     <use href="icon-pack/pagination-arrow.svg"></use>
                   </svg>
                 </button>
-                <button class="pagination-last-button">
+                <button class="pagination-last-button" aria-label="Last page">
                   <svg
                     class="pagination-arrow"
                     aria-hidden="true"
