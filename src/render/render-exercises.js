@@ -17,7 +17,7 @@ export async function renderExercises() {
                     <use href="icon-pack/star-icon.svg"></use>
                 </svg>
             </div>
-            <button class="start-button">
+            <button class="start-button" aria-label="Start exercise">
                 Start
                 <svg class="start-arrow" width="16" height="16">
                     <use href="icon-pack/start-arrow.svg"></use>
