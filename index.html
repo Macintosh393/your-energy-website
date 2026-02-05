@@ -12,9 +12,9 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/your-energy-website/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/your-energy-website/assets/vendor-CLb_lYsF.js">
-    <link rel="stylesheet" crossorigin href="/your-energy-website/assets/styles-Dk7D1Qvi.css">
+    <script type="module" crossorigin src="/your-energy-website/assets/vendor-CLb_lYsF.js"></script>
+    <script type="module" crossorigin src="/your-energy-website/assets/main-Bmryj3Ez.js"></script>
+    <link rel="stylesheet" crossorigin href="/your-energy-website/assets/main-ChabA_oy.css">
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -28,18 +28,11 @@
 
     <nav class="nav">
       <ul class="nav-list">
-        <li class="nav-item active">
-          <a
-            class="nav-link {=$highlight-act}"
-            href="index.html"
-            aria-current="page"
-            >Home</a
-          >
+        <li class="nav-item">
+          <a class="nav-link" href="index.html" aria-current="page">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="favorites.html"
-            >Favourites</a
-          >
+          <a class="nav-link" href="favorites.html">Favourites</a>
         </li>
       </ul>
     </nav>
@@ -230,7 +223,7 @@
       <div class="container">
         <div class="exercises-navigation-wrapper">
           <div class="main-heading-wrapper">
-            <h2 class="main-heading">Exercises /</h2>
+            <h2 class="main-heading">Exercises</h2>
             <h3 class="category-heading">Waist</h3>
           </div>
 
@@ -362,7 +355,9 @@
           </section>
 
           <section class="content">
-            <ul class="content-list"></ul>
+            <ul class="content-list">
+              <p class="loading-placeholder">Loading...</p>
+            </ul>
 
             <div class="pagination">
               <div class="pagination-back-wrapper">
