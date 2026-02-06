@@ -1,4 +1,5 @@
 import { getExercise } from '../api/your-energy-api';
+import { isFavorite } from '../handlers/favorites-handler';
 import { capitalize } from '../utility/capitalize';
 
 const modalBackdrop = document.querySelector('.modal-backdrop');
@@ -44,12 +45,7 @@ export async function renderExerciseDetails(id) {
             <p class="exercise-detailed-description">${ex.description}</p>
 
             <div class="exercise-action-buttons">
-                <button type="button" class="add-to-favorites-btn" data-id="${ex._id}" aria-label="Add to favorites">
-                    Add to favorites
-                    <svg class="like-icon" width="20" height="20">
-                        <use href="button-icons/like.svg"></use>
-                    </svg>
-                </button>
+                ${isFavorite(ex._id) ? '<button type="button" class="remove-from-favorites-btn" data-id="' + ex._id + '" aria-label="Remove from favorites">Remove from favorites<svg class="bin-icon" width="20" height="20"><use href="button-icons/delete.svg"></use></svg></button>' : '<button type="button" class="add-to-favorites-btn" data-id="' + ex._id + '" aria-label="Add to favorites">Add to favorites<svg class="like-icon" width="20" height="20"><use href="button-icons/like.svg"></use></svg></button>'}
                 <button type="button" class="give-rating-btn" data-id="${ex._id}" aria-label="Give exercise a rating">
                     Give a rating
                 </button>

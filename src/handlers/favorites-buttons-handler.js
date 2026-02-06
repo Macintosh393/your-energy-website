@@ -9,7 +9,7 @@ export function addFavoritesButtonsHandlers() {
 
     if (addFavBtn) {
       const exerciseId = addFavBtn.dataset.id;
-      //putFavorite(exerciseId);
+      putFavorite(exerciseId);
       const removeButtonHTML = `
         <button type="button" class="remove-from-favorites-btn" aria-label="Remove from favorites" data-id="${exerciseId}">
             Remove from favorites
@@ -24,9 +24,8 @@ export function addFavoritesButtonsHandlers() {
       ).body.firstChild;
       addFavBtn.replaceWith(removeButtonElement);
     } else if (removeFavBtn) {
-      console.log('Remove from favorites button clicked');
       const exerciseId = removeFavBtn.dataset.id;
-      //removeFavorite(exerciseId);
+      removeFavorite(exerciseId);
       const addButtonHTML = `
         <button type="button" class="add-to-favorites-btn" aria-label="Add to favorites" data-id="${exerciseId}">
             Add to favorites
