@@ -9,7 +9,7 @@ export async function renderExerciseDetails(id) {
   const ex = await getExercise(id);
   modalBody.innerHTML = `
     <div class="exercise-details-wrapper">
-        <img src="${ex.gifUrl}" class="exercise-gif" alt="Gif example of how to do the exercise"/>
+        <img src="${ex.gifUrl}" class="exercise-gif" alt="Gif example of how to do the exercise" width="258" height="258"/>
         <div class="exercise-details-container">
             <div class="exercise-header">
                 <h3 class="exercise-details-title">${capitalize(ex.name)}</h3>

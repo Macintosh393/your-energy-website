@@ -5,7 +5,18 @@ import { state } from '../state/state';
 const favoriteList = document.querySelector('.favorite-exercises-list');
 
 export function renderFavorites() {
-  favoriteList.innerHTML = getFavorites()
+  const favoritExercises = getFavorites();
+  if (favoritExercises.length === 0) {
+    favoriteList.innerHTML = `
+    <p class="favorites-placeholder">
+        It appears that you haven't added any exercises to your
+        favorites yet. To get started, you can add exercises that you
+        like to your favorites for easier access in the future.
+    </p>`;
+    return;
+  }
+
+  favoriteList.innerHTML = favoritExercises
     .slice(
       (state.pagination.page - 1) * state.pagination.perPage,
       state.pagination.page * state.pagination.perPage

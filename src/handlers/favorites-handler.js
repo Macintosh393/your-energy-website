@@ -1,4 +1,5 @@
 import { getExercise } from '../api/your-energy-api';
+import { renderFavorites } from '../render/render-favorites';
 import { state } from '../state/state';
 
 let cacheFavoriteIds;
@@ -29,6 +30,7 @@ export function removeFavorite(exerciseId) {
   popCache(exerciseId);
   if (state.pagination.purpose === 'favorites') {
     state.pagination.updateSize(getFavorites().length);
+    renderFavorites();
   }
 }
 
