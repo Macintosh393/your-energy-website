@@ -19,8 +19,8 @@ export function renderRatingForm(id) {
             </div>
         </div>
         <div class="rating-text-section">
-            <input type="email" id="rating-email-input" placeholder="Email"/>
-            <input type="text" id="rating-review-text" placeholder="Your comment"/>
+            <input type="email" id="rating-email-input" placeholder="Email" required/>
+            <textarea id="rating-review-text" placeholder="Your comment"></textarea>
         </div>
         <button type="submit" id="submit-rating-button" aria-label="Submit your review about the exercise">Send</button>
     </form>

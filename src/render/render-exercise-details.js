@@ -44,7 +44,7 @@ export async function renderExerciseDetails(id) {
             <p class="exercise-detailed-description">${ex.description}</p>
 
             <div class="exercise-action-buttons">
-                <button type="button" class="add-to-favorites-btn" aria-label="Add to favorites">
+                <button type="button" class="add-to-favorites-btn" data-id="${ex._id}" aria-label="Add to favorites">
                     Add to favorites
                     <svg class="like-icon" width="20" height="20">
                         <use href="button-icons/like.svg"></use>
@@ -58,7 +58,7 @@ export async function renderExerciseDetails(id) {
     </div>
     `;
 
-  const rating = ex.rating; // Your decimal rating
+  const rating = ex.rating;
   const starsContainer = modalBody.querySelector('.rating-stars-container');
 
   for (let i = 1; i <= 5; i++) {
@@ -66,14 +66,13 @@ export async function renderExerciseDetails(id) {
     star.classList.add('star', 'filled');
     star.innerHTML = '★';
 
-    // Calculate fill percentage for this specific star
     let fill = 0;
     if (rating >= i) {
-      fill = 100; // Fully filled
+      fill = 100;
     } else if (rating > i - 1) {
-      fill = (rating - (i - 1)) * 100; // Partial fill (e.g., 0.2 * 100 = 20%)
+      fill = (rating - (i - 1)) * 100;
     } else {
-      fill = 0; // Empty
+      fill = 0;
     }
 
     star.style.setProperty('--percent', `${fill}%`);

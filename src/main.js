@@ -10,6 +10,7 @@ import { addSubscriptionFormHandler } from './handlers/subscription-form-handler
 import { addSearchHandler } from './handlers/search-handler.js';
 import { addExerciseDetailsHandler } from './handlers/exercise-details-handler.js';
 import { addModalHandlers } from './handlers/modal-handler.js';
+import { addFavoritesButtonsHandlers } from './handlers/favorites-buttons-handler.js';
 
 function initNavigation() {
   let url = window.location;
@@ -49,6 +50,7 @@ async function initHomePage() {
 
   addModalHandlers();
   addExerciseDetailsHandler();
+  addFavoritesButtonsHandlers();
 
   const subscriptionForm = document.querySelector('.subscription-form');
   addSubscriptionFormHandler(subscriptionForm);
