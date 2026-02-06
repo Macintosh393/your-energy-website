@@ -70,6 +70,7 @@
 
   .favorite-exercises-list {
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     gap: 20px;
@@ -120,6 +121,7 @@
     .favorite-exercises-list {
       flex-direction: row;
       flex-wrap: wrap;
+      align-items: start;
       gap: 32px 16px;
     }
   }
@@ -154,6 +156,7 @@
 
     .favorite-exercises-list {
       max-width: 826px;
+      min-width: 826px;
     }
 
     .exercise {
