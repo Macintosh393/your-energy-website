@@ -29,11 +29,11 @@ var _=Object.defineProperty;var D=(t,e,i)=>e in t?_(t,e,{enumerable:!0,configura
             <p class="exercise-info">Target: <span class="exercise-info-value">${o(i.target)}</span></p>
         </div>
       </li>`).join("");G.innerHTML=e,d(s.pagination.page,s.pagination.maxPage)}let x;Z();function f(){return JSON.parse(localStorage.getItem("favorites"))??[]}async function W(t){const e=await H(t),i=f();console.log(i);const n=JSON.stringify([...i,e]);console.log(n),localStorage.setItem("favorites",n),K(t)}function M(t){const e=f(),i=JSON.stringify(e.filter(n=>n._id!=t));localStorage.setItem("favorites",i),X(t),s.pagination.purpose==="favorites"&&(s.pagination.updateSize(f().length),u())}function Y(t){return x.has(t)}function Z(){x=new Set(f().map(t=>t._id))}function K(t){x.add(t)}function X(t){x.delete(t)}const $=document.querySelector(".favorite-exercises-list");function u(){const t=f();if(t.length===0){$.innerHTML=`
-    <p class="favorites-placeholder">
+    <li class="favorites-placeholder">
         It appears that you haven't added any exercises to your
         favorites yet. To get started, you can add exercises that you
         like to your favorites for easier access in the future.
-    </p>`;return}$.innerHTML=t.slice((s.pagination.page-1)*s.pagination.perPage,s.pagination.page*s.pagination.perPage).map(e=>`
+    </li>`;return}$.innerHTML=t.slice((s.pagination.page-1)*s.pagination.perPage,s.pagination.page*s.pagination.perPage).map(e=>`
           <li class="exercise">
             <div class="exercise-line-wrapper">
                 <span class="workout">workout</span>
@@ -151,4 +151,4 @@ var _=Object.defineProperty;var D=(t,e,i)=>e in t?_(t,e,{enumerable:!0,configura
             </svg>
         </button>
       `,r=new DOMParser().parseFromString(a,"text/html").body.firstChild;i.replaceWith(r)}})}function xe(){let t=window.location;const e=document.querySelector(".nav-list"),i=t.pathname.lastIndexOf("/")+1;e.querySelector('a[href="'+t.pathname.slice(i)+'"]').parentNode.classList.add("active"),t.pathname.slice(i)==="index.html"?qe():Se()}async function qe(){const t=document.querySelector(".nav-toggle"),e=document.querySelector(".nav-close"),i=document.querySelector(".mobile-menu-backdrop");F(t,e,i);const n=document.querySelector(".filter-tabs-list"),a=document.querySelector(".content-list");se(n);const r=document.querySelector(".exercises-search");ue(r),s.pagination=new m("filters"),g(),oe(a),C(),T(),R(),O(a),A();const c=document.querySelector(".subscription-form");N(c)}async function Se(){const t=document.querySelector(".nav-toggle"),e=document.querySelector(".nav-close"),i=document.querySelector(".mobile-menu-backdrop");F(t,e,i),C(),s.pagination=new m("favorites",f().length),T(),R();const n=document.querySelector(".favorite-exercises-list");O(n),A(),u();const a=document.querySelector(".subscription-form");N(a)}xe();
-//# sourceMappingURL=main-DwPyOXta.js.map
+//# sourceMappingURL=main-DcBRKLXl.js.map
