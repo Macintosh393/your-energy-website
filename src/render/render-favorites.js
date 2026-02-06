@@ -1,10 +1,15 @@
 import { getFavorites } from '../handlers/favorites-handler';
 import { capitalize } from '../utility/capitalize';
+import { state } from '../state/state';
 
 const favoriteList = document.querySelector('.favorite-exercises-list');
 
 export function renderFavorites() {
   favoriteList.innerHTML = getFavorites()
+    .slice(
+      (state.pagination.page - 1) * state.pagination.perPage,
+      state.pagination.page * state.pagination.perPage
+    )
     .map(el => {
       return `
           <li class="exercise">

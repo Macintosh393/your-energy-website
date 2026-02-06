@@ -1,4 +1,5 @@
 import { renderExercises } from '../render/render-exercises';
+import { renderFavorites } from '../render/render-favorites';
 import { renderFilters } from '../render/render-filters';
 import { renderPagination } from '../render/render-pagination';
 
@@ -8,10 +9,9 @@ export default class Pagination {
   maxPage;
   purpose;
 
-  constructor(purpose) {
+  constructor(purpose, numberOfElements = null) {
     this.purpose = purpose;
     this.page = 1;
-    this.maxPage = 1;
 
     if (this.purpose === 'filters') {
       if (window.matchMedia('(min-width: 768px)').matches) {
@@ -26,6 +26,11 @@ export default class Pagination {
         this.perPage = 8;
       }
     }
+    if (numberOfElements) {
+      this.updateSize(numberOfElements);
+    } else {
+      this.maxPage = 1;
+    }
 
     renderPagination(this.page, this.maxPage);
   }
@@ -38,6 +43,10 @@ export default class Pagination {
     this.maxPage = maxPage;
   }
 
+  updateSize(numberOfElements) {
+    this.maxPage = Math.ceil(numberOfElements / this.perPage);
+  }
+
   next() {
     if (this.page < this.maxPage) {
       this.page++;
@@ -48,6 +57,8 @@ export default class Pagination {
       renderFilters();
     } else if (this.purpose === 'exercises') {
       renderExercises();
+    } else if (this.purpose === 'favorites') {
+      renderFavorites();
     }
   }
 
@@ -60,6 +71,8 @@ export default class Pagination {
       renderFilters();
     } else if (this.purpose === 'exercises') {
       renderExercises();
+    } else if (this.purpose === 'favorites') {
+      renderFavorites();
     }
   }
 
@@ -70,6 +83,8 @@ export default class Pagination {
       renderFilters();
     } else if (this.purpose === 'exercises') {
       renderExercises();
+    } else if (this.purpose === 'favorites') {
+      renderFavorites();
     }
   }
 
@@ -80,6 +95,8 @@ export default class Pagination {
       renderFilters();
     } else if (this.purpose === 'exercises') {
       renderExercises();
+    } else if (this.purpose === 'favorites') {
+      renderFavorites();
     }
   }
 }

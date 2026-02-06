@@ -1,4 +1,6 @@
 import { getExercise } from '../api/your-energy-api';
+import { state } from '../state/state';
+
 let cacheFavoriteIds;
 
 rebuildCache();
@@ -25,6 +27,9 @@ export function removeFavorite(exerciseId) {
   );
   localStorage.setItem('favorites', newFavorites);
   popCache(exerciseId);
+  if (state.pagination.purpose === 'favorites') {
+    state.pagination.updateSize(getFavorites().length);
+  }
 }
 
 export function isFavorite(exerciseId) {

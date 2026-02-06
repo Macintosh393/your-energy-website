@@ -12,6 +12,7 @@ import { addExerciseDetailsHandler } from './handlers/exercise-details-handler.j
 import { addModalHandlers } from './handlers/modal-handler.js';
 import { addFavoritesButtonsHandlers } from './handlers/favorites-buttons-handler.js';
 import { renderFavorites } from './render/render-favorites.js';
+import { getFavorites } from './handlers/favorites-handler.js';
 
 function initNavigation() {
   let url = window.location;
@@ -65,7 +66,7 @@ async function initFavoritesPage() {
 
   setQuote();
 
-  state.pagination = new Pagination('favorites');
+  state.pagination = new Pagination('favorites', getFavorites().length);
   addPaginationHandler();
 
   addModalHandlers();

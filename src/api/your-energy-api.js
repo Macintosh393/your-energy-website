@@ -63,7 +63,7 @@ export async function subscribe(email) {
   } catch (e) {
     iziToast.error({
       title: 'Error',
-      message: "Couldn't subscribe. Email might already registered",
+      message: "Couldn't subscribe. Email might be already registered",
       position: 'bottomCenter',
     });
   }
