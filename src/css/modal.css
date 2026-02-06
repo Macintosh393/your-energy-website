@@ -10,6 +10,7 @@
   background-color: #24242450;
   overflow-y: scroll;
   z-index: 50;
+  padding: 20px 0;
 }
 
 .modal-backdrop.is-hidden {

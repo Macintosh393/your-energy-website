@@ -1,7 +1,14 @@
 .favorites {
   padding: 0 20px;
   margin-top: 132px;
-  margin-bottom: auto;
+  min-height: 100vh;
+  margin-bottom: 100px;
+
+  .favorites-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 
   .page-title {
     font-weight: 400;
@@ -10,6 +17,14 @@
     letter-spacing: -2%;
     margin-bottom: 20px;
     color: #242424;
+  }
+
+  .motivation {
+    order: 1;
+  }
+
+  main {
+    order: 2;
   }
 
   .motivation-quote {
@@ -53,6 +68,12 @@
     text-align: center;
     margin-bottom: 46px;
   }
+
+  .favorite-exercises-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -61,6 +82,10 @@
     max-width: 768px;
     margin-left: auto;
     margin-right: auto;
+
+    .favorites-wrapper {
+      gap: 54px;
+    }
 
     .motivation > .container {
       gap: 16px;
@@ -73,6 +98,7 @@
     }
 
     .motivation-quote {
+      width: 100%;
       max-width: 704px;
       height: 220px;
     }
@@ -90,6 +116,12 @@
     .favorites-placeholder {
       padding: 112px 100px;
     }
+
+    .favorite-exercises-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 32px 16px;
+    }
   }
 }
 
@@ -104,11 +136,10 @@
 
     main {
       order: 2;
-      flex-grow: 1;
+      margin-top: 0;
     }
 
     .favorites-wrapper {
-      display: flex;
       flex-direction: row;
       gap: 32px;
     }
@@ -119,6 +150,14 @@
 
     .motivation-image-wrapper {
       width: 239px;
+    }
+
+    .favorite-exercises-list {
+      max-width: 826px;
+    }
+
+    .exercise {
+      max-width: 405px;
     }
   }
 }

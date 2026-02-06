@@ -11,6 +11,7 @@ import { addSearchHandler } from './handlers/search-handler.js';
 import { addExerciseDetailsHandler } from './handlers/exercise-details-handler.js';
 import { addModalHandlers } from './handlers/modal-handler.js';
 import { addFavoritesButtonsHandlers } from './handlers/favorites-buttons-handler.js';
+import { renderFavorites } from './render/render-favorites.js';
 
 function initNavigation() {
   let url = window.location;
@@ -49,13 +50,33 @@ async function initHomePage() {
   addPaginationHandler();
 
   addModalHandlers();
-  addExerciseDetailsHandler();
+  addExerciseDetailsHandler(contentList);
   addFavoritesButtonsHandlers();
 
   const subscriptionForm = document.querySelector('.subscription-form');
   addSubscriptionFormHandler(subscriptionForm);
 }
 
-async function initFavoritesPage() {}
+async function initFavoritesPage() {
+  const burgerButton = document.querySelector('.nav-toggle');
+  const closeButton = document.querySelector('.nav-close');
+  const mobileMenuBackdrop = document.querySelector('.mobile-menu-backdrop');
+  addMenuHandlers(burgerButton, closeButton, mobileMenuBackdrop);
+
+  setQuote();
+
+  state.pagination = new Pagination('favorites');
+  addPaginationHandler();
+
+  addModalHandlers();
+  const contentList = document.querySelector('.favorite-exercises-list');
+  addExerciseDetailsHandler(contentList);
+  addFavoritesButtonsHandlers();
+
+  renderFavorites();
+
+  const subscriptionForm = document.querySelector('.subscription-form');
+  addSubscriptionFormHandler(subscriptionForm);
+}
 
 initNavigation();
