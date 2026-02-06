@@ -7,7 +7,7 @@ const modalBody = document.querySelector('.modal-body');
 export async function renderExerciseDetails(id) {
   const ex = await getExercise(id);
   modalBody.innerHTML = `
-    <div class="exercise-details-wrapper"></div>
+    <div class="exercise-details-wrapper">
         <img src="${ex.gifUrl}" class="exercise-gif" alt="Gif example of how to do the exercise"/>
         <div class="exercise-details-container">
             <div class="exercise-header">
@@ -50,7 +50,7 @@ export async function renderExerciseDetails(id) {
                         <use href="button-icons/like.svg"></use>
                     </svg>
                 </button>
-                <button type="button" class="give-rating-btn" aria-label="Give exercise a rating">
+                <button type="button" class="give-rating-btn" data-id="${ex._id}" aria-label="Give exercise a rating">
                     Give a rating
                 </button>
             </div>

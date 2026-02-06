@@ -68,3 +68,7 @@ export async function subscribe(email) {
     });
   }
 }
+
+export async function patchReview(id, req) {
+  await axios.patch(`/exercises/${id}/rating`, req);
+}

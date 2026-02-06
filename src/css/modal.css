@@ -22,12 +22,15 @@
   align-items: end;
   margin: auto;
   padding: 40px 20px;
-  width: 100%;
+  width: fit-content;
   min-height: 50px;
-  max-width: 335px;
   background-color: #242424;
   border-radius: 20px;
   z-index: 55;
+}
+
+.modal-body {
+  min-width: 295px;
 }
 
 .modal-close-btn {
@@ -54,9 +57,12 @@
 .exercise-details-wrapper {
   display: flex;
   flex-direction: column;
+  max-width: 295px;
+  width: 100%;
 }
 
 .exercise-gif {
+  display: flex;
   width: 100%;
   max-width: 295px;
   height: 258px;
@@ -209,9 +215,9 @@
 /* Rating form */
 #rating-form {
   width: 100%;
+  max-width: 335px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .rating-section {
@@ -224,6 +230,7 @@
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 0px;
+  margin-bottom: -10px;
   color: #f4f4f440;
 }
 
@@ -249,6 +256,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 #rating-email-input {
@@ -313,5 +322,59 @@
   &:hover {
     background-color: #242424;
     color: #f4f4f4;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-content {
+    padding: 32px 32px;
+  }
+
+  .modal-close-btn {
+    position: relative;
+    top: 17px;
+  }
+
+  .exercise-details-wrapper {
+    max-width: 704px;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .exercise-gif {
+    max-width: 270px;
+  }
+
+  .exercise-details-container {
+    margin-top: 0;
+    max-width: 338px;
+  }
+
+  .exercise-details-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .exercise-action-buttons {
+    flex-direction: row;
+    gap: 7px;
+  }
+
+  .add-to-favorites-btn {
+    max-width: 194px;
+  }
+
+  .give-rating-btn {
+    max-width: 137px;
+  }
+
+  #rating-form {
+    width: 350px;
+    margin: 8px;
+  }
+
+  .rating-text-section {
+    margin-top: 5px;
+    margin-bottom: 32px;
   }
 }
