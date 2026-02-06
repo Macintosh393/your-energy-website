@@ -30,10 +30,8 @@
 
 .hero-title {
   font-weight: 400;
-  font-style: Regular;
   font-size: 38px;
   line-height: 44px;
-  letter-spacing: -2%;
 
   margin-bottom: 20px;
 }
@@ -42,7 +40,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  letter-spacing: -2%;
 
   margin-bottom: 20px;
 }
@@ -102,7 +99,6 @@ main > .container {
   font-weight: 400;
   font-size: 28px;
   line-height: 38px;
-  letter-spacing: -2%;
 }
 
 .category-heading {
@@ -110,7 +106,6 @@ main > .container {
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
-  letter-spacing: -2%;
   color: #24242450;
 }
 
@@ -144,10 +139,9 @@ main > .container {
 
 .exercises-search-input {
   font-weight: 400;
-  font-style: Regular;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 
   background: none;
   border: none;
@@ -179,7 +173,7 @@ main > .container {
 .filter-tabs-list {
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
 
   margin: 20px 0;
   display: flex;
@@ -250,7 +244,7 @@ main > .container {
 .motivation-quote-header {
   display: flex;
   justify-content: space-between;
-  align-items: top;
+  align-items: start;
 }
 
 .motivation-title {
@@ -264,7 +258,6 @@ main > .container {
 .quotes-wrapper {
   display: flex;
   justify-content: center;
-  align-items: top;
 
   width: 20px;
   height: 20px;
@@ -363,7 +356,6 @@ main > .container {
   margin-top: 16px;
   display: -webkit-box;
   max-width: 100%;
-  line-clamp: 5;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;

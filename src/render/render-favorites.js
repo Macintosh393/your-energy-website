@@ -8,11 +8,11 @@ export function renderFavorites() {
   const favoritExercises = getFavorites();
   if (favoritExercises.length === 0) {
     favoriteList.innerHTML = `
-    <p class="favorites-placeholder">
+    <li class="favorites-placeholder">
         It appears that you haven't added any exercises to your
         favorites yet. To get started, you can add exercises that you
         like to your favorites for easier access in the future.
-    </p>`;
+    </li>`;
     return;
   }
 
