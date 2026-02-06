@@ -11,10 +11,11 @@ export function renderFavorites() {
             <div class="exercise-line-wrapper">
                 <span class="workout">workout</span>
                 <div class="rating">
-                    <span class="rating-value">${el.rating.toFixed(1)}</span>
-                    <svg class="star-icon" width="18" height="18">
-                        <use href="icon-pack/star-icon.svg"></use>
-                    </svg>
+                    <button type="button" class="remove-favorite-quick-btn" data-id="${el._id}">
+                        <svg class="bin-icon" width="18" height="18">
+                            <use href="button-icons/delete.svg"></use>
+                        </svg>
+                    </button>
                 </div>
                 <button class="start-button" data-id="${el._id}" aria-label="Start exercise">
                     Start
