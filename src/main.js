@@ -18,11 +18,14 @@ function initNavigation() {
   let url = window.location;
   const navList = document.querySelector('.nav-list');
   const pathIndex = url.pathname.lastIndexOf('/') + 1;
+  let pageName = url.pathname.slice(pathIndex);
+  pageName = pageName.length > 0 ? pageName : 'index.html';
+
   navList
-    .querySelector('a[href="' + url.pathname.slice(pathIndex) + '"]')
+    .querySelector('a[href="' + pageName + '"]')
     .parentNode.classList.add('active');
 
-  if (url.pathname.slice(pathIndex) === 'index.html') {
+  if (pageName === 'index.html') {
     initHomePage();
   } else {
     initFavoritesPage();

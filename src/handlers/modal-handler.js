@@ -15,6 +15,13 @@ export function addModalHandlers() {
     body.classList.remove('modal-open');
     header.style.visibility = 'visible';
   });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      modalBackdrop.classList.add('is-hidden');
+      body.classList.remove('modal-open');
+      header.style.visibility = 'visible';
+    }
+  });
   modalCloseBtn.addEventListener('click', () => {
     modalBackdrop.classList.add('is-hidden');
     body.classList.remove('modal-open');

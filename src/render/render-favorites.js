@@ -3,6 +3,7 @@ import { capitalize } from '../utility/capitalize';
 import { state } from '../state/state';
 
 const favoriteList = document.querySelector('.favorite-exercises-list');
+const pagination = document.querySelector('.pagination');
 
 export function renderFavorites() {
   const favoritExercises = getFavorites();
@@ -13,6 +14,8 @@ export function renderFavorites() {
         favorites yet. To get started, you can add exercises that you
         like to your favorites for easier access in the future.
     </li>`;
+
+    pagination.style.display = 'none';
     return;
   }
 

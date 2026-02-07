@@ -1,7 +1,7 @@
 .favorites {
   padding: 0 20px;
   margin-top: 132px;
-  min-height: 100vh;
+  min-height: 80vh;
   margin-bottom: 100px;
 
   .favorites-wrapper {
@@ -64,8 +64,12 @@
   }
 
   .favorites-placeholder {
+    font-size: 14px;
+    line-height: 18px;
+
     text-align: center;
     margin-bottom: 46px;
+    max-width: 318px;
   }
 
   .favorite-exercises-list {
@@ -115,7 +119,14 @@
     }
 
     .favorites-placeholder {
-      padding: 30px 100px;
+      font-size: 18px;
+      line-height: 24px;
+
+      max-width: 554px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+      padding: 30px 0;
     }
 
     .favorite-exercises-list {
@@ -157,6 +168,10 @@
     .favorite-exercises-list {
       max-width: 826px;
       min-width: 826px;
+    }
+
+    .favorites-placeholder {
+      margin-top: 84px;
     }
 
     .exercise {
