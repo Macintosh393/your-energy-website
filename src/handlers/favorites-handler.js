@@ -2,6 +2,17 @@ import { getExercise } from '../api/your-energy-api';
 import { renderFavorites } from '../render/render-favorites';
 import { state } from '../state/state';
 
+const clearOutdatedLocalStorage = function () {
+  const version = localStorage.getItem('version');
+
+  if (version === null) {
+    localStorage.clear();
+    localStorage.setItem('version', '1.0.1');
+  }
+};
+
+clearOutdatedLocalStorage();
+
 let cacheFavoriteIds;
 
 rebuildCache();
