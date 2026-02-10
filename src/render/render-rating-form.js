@@ -7,7 +7,7 @@ export function renderRatingForm(id) {
             <label class="rating-label" for="stars-fieldset">Rating</label>
             <div class="rating-line-wrapper">
                 <span class="rating-form-value">0.0</span>
-                <fieldset id="stars-fieldset">
+                <fieldset id="stars-fieldset" name="stars-fieldset">
                     <span class="star-cb-group">
                         <input type="radio" id="rating-5" name="rating" value="5.0" /><label for="rating-5">5</label>
                         <input type="radio" id="rating-4" name="rating" value="4.0" /><label for="rating-4">4</label>

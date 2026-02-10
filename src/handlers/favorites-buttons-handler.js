@@ -2,15 +2,14 @@ import { putFavorite, removeFavorite } from './favorites-handler';
 
 const modalBody = document.querySelector('.modal-body');
 
-export function addFavoritesButtonsHandlers() {
-  modalBody.addEventListener('click', event => {
-    const addFavBtn = event.target.closest('.add-to-favorites-btn');
-    const removeFavBtn = event.target.closest('.remove-from-favorites-btn');
+const onClickFavoritesButtons = function (event) {
+  const addFavBtn = event.target.closest('.add-to-favorites-btn');
+  const removeFavBtn = event.target.closest('.remove-from-favorites-btn');
 
-    if (addFavBtn) {
-      const exerciseId = addFavBtn.dataset.id;
-      putFavorite(exerciseId);
-      const removeButtonHTML = `
+  if (addFavBtn) {
+    const exerciseId = addFavBtn.dataset.id;
+    putFavorite(exerciseId);
+    const removeButtonHTML = `
         <button type="button" class="remove-from-favorites-btn" aria-label="Remove from favorites" data-id="${exerciseId}">
             Remove from
             <svg class="bin-icon" width="20" height="20">
@@ -18,15 +17,15 @@ export function addFavoritesButtonsHandlers() {
             </svg>
         </button>
       `;
-      const removeButtonElement = new DOMParser().parseFromString(
-        removeButtonHTML,
-        'text/html'
-      ).body.firstChild;
-      addFavBtn.replaceWith(removeButtonElement);
-    } else if (removeFavBtn) {
-      const exerciseId = removeFavBtn.dataset.id;
-      removeFavorite(exerciseId);
-      const addButtonHTML = `
+    const removeButtonElement = new DOMParser().parseFromString(
+      removeButtonHTML,
+      'text/html'
+    ).body.firstChild;
+    addFavBtn.replaceWith(removeButtonElement);
+  } else if (removeFavBtn) {
+    const exerciseId = removeFavBtn.dataset.id;
+    removeFavorite(exerciseId);
+    const addButtonHTML = `
         <button type="button" class="add-to-favorites-btn" aria-label="Add to favorites" data-id="${exerciseId}">
             Add to favorites
             <svg class="like-icon" width="20" height="20">
@@ -34,11 +33,18 @@ export function addFavoritesButtonsHandlers() {
             </svg>
         </button>
       `;
-      const addButtonElement = new DOMParser().parseFromString(
-        addButtonHTML,
-        'text/html'
-      ).body.firstChild;
-      removeFavBtn.replaceWith(addButtonElement);
-    }
-  });
+    const addButtonElement = new DOMParser().parseFromString(
+      addButtonHTML,
+      'text/html'
+    ).body.firstChild;
+    removeFavBtn.replaceWith(addButtonElement);
+  }
+};
+
+export function addFavoritesButtonsHandlers() {
+  modalBody.addEventListener('click', onClickFavoritesButtons);
+}
+
+export function removeFavoritesButtonsHandlers() {
+  modalBody.removeEventListener('click', onClickFavoritesButtons);
 }

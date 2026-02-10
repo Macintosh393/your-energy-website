@@ -33,10 +33,7 @@ function initNavigation() {
 }
 
 async function initHomePage() {
-  const burgerButton = document.querySelector('.nav-toggle');
-  const closeButton = document.querySelector('.nav-close');
-  const mobileMenuBackdrop = document.querySelector('.mobile-menu-backdrop');
-  addMenuHandlers(burgerButton, closeButton, mobileMenuBackdrop);
+  addMenuHandlers();
 
   const filterTabsList = document.querySelector('.filter-tabs-list');
   const contentList = document.querySelector('.content-list');
@@ -53,29 +50,22 @@ async function initHomePage() {
 
   addPaginationHandler();
 
-  addModalHandlers();
   addExerciseDetailsHandler(contentList);
-  addFavoritesButtonsHandlers();
 
   const subscriptionForm = document.querySelector('.subscription-form');
   addSubscriptionFormHandler(subscriptionForm);
 }
 
 async function initFavoritesPage() {
-  const burgerButton = document.querySelector('.nav-toggle');
-  const closeButton = document.querySelector('.nav-close');
-  const mobileMenuBackdrop = document.querySelector('.mobile-menu-backdrop');
-  addMenuHandlers(burgerButton, closeButton, mobileMenuBackdrop);
+  addMenuHandlers();
 
   setQuote();
 
   state.pagination = new Pagination('favorites', getFavorites().length);
   addPaginationHandler();
 
-  addModalHandlers();
   const contentList = document.querySelector('.favorite-exercises-list');
   addExerciseDetailsHandler(contentList);
-  addFavoritesButtonsHandlers();
 
   renderFavorites();
 
