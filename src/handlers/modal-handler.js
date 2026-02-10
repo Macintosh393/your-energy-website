@@ -2,6 +2,7 @@ import iziToast from 'izitoast';
 import { patchReview } from '../api/your-energy-api';
 import { renderRatingForm } from '../render/render-rating-form';
 import { isValidEmail } from '../utility/email-validator';
+import { renderExerciseDetails } from '../render/render-exercise-details';
 
 const modalBackdrop = document.querySelector('.modal-backdrop');
 const modalCloseBtn = document.querySelector('.modal-close-btn');
@@ -10,23 +11,26 @@ const header = document.querySelector('header');
 const body = document.querySelector('body');
 
 export function addModalHandlers() {
-  modalBackdrop.addEventListener('click', () => {
-    modalBackdrop.classList.add('is-hidden');
-    body.classList.remove('modal-open');
-    header.style.visibility = 'visible';
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') {
+  const closeModalWindow = function () {
+    const form = document.querySelector('#rating-form');
+    if (!form) {
       modalBackdrop.classList.add('is-hidden');
       body.classList.remove('modal-open');
       header.style.visibility = 'visible';
+    } else {
+      renderExerciseDetails(form.dataset.id);
     }
-  });
-  modalCloseBtn.addEventListener('click', () => {
-    modalBackdrop.classList.add('is-hidden');
-    body.classList.remove('modal-open');
-    header.style.visibility = 'visible';
-  });
+  };
+
+  const closeModalWindowOnEsc = function (event) {
+    if (event.key === 'Escape') {
+      closeModalWindow();
+    }
+  };
+
+  modalBackdrop.addEventListener('click', closeModalWindow);
+  document.addEventListener('keydown', closeModalWindowOnEsc);
+  modalCloseBtn.addEventListener('click', closeModalWindow);
 
   modalBody.addEventListener('click', event => {
     event.stopPropagation();
@@ -36,8 +40,10 @@ export function addModalHandlers() {
     const btn = event.target.closest('.give-rating-btn');
     if (!btn) return;
 
-    renderRatingForm(btn.dataset.id);
+    const exerciseId = btn.dataset.id;
+    renderRatingForm(exerciseId);
   });
+
   modalBody.addEventListener('submit', event => {
     try {
       event.preventDefault();
@@ -52,10 +58,9 @@ export function addModalHandlers() {
       if (!isValidEmail(email)) throw new Error('Invalid email');
       if (rate == 0) throw new Error("Rating can't be 0");
 
-      patchReview(form.dataset.id, req);
-      modalBackdrop.classList.add('is-hidden');
-      body.classList.remove('modal-open');
-      header.style.visibility = 'visible';
+      const exerciseId = form.dataset.id;
+      patchReview(exerciseId, req);
+      renderExerciseDetails(exerciseId);
 
       iziToast.success({
         title: 'Success',
@@ -70,6 +75,7 @@ export function addModalHandlers() {
       });
     }
   });
+
   modalBody.addEventListener('change', event => {
     if (event.target.type === 'radio') {
       const rating = document.querySelector('.rating-form-value');
