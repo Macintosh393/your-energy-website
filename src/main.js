@@ -12,8 +12,6 @@ import { addExerciseDetailsHandler } from './handlers/exercise-details-handler.j
 import { renderFavorites } from './render/render-favorites.js';
 import { getFavorites } from './handlers/favorites-handler.js';
 
-localStorage.clear();
-
 function initNavigation() {
   let url = window.location;
   const navList = document.querySelector('.nav-list');
