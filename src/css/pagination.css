@@ -26,7 +26,8 @@
   gap: 8px;
 }
 
-.pagination-page-number {
+.pagination-page-number,
+.pagination-continues {
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
@@ -36,6 +37,10 @@
   justify-content: center;
   height: 32px;
   color: #24242450;
+}
+
+.pagination-page-number {
+  cursor: pointer;
 }
 
 .pagination-page-number.current {
@@ -68,7 +73,8 @@
     margin-top: 32px;
   }
 
-  .pagination-page-number {
+  .pagination-page-number,
+  .pagination-continues {
     font-size: 24px;
     line-height: 32px;
   }

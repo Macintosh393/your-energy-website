@@ -47,6 +47,19 @@ export default class Pagination {
     this.maxPage = Math.ceil(numberOfElements / this.perPage);
   }
 
+  choosePage(pageNumber) {
+    this.page = pageNumber;
+
+    renderPagination(this.page, this.maxPage);
+    if (this.purpose === 'filters') {
+      renderFilters();
+    } else if (this.purpose === 'exercises') {
+      renderExercises();
+    } else if (this.purpose === 'favorites') {
+      renderFavorites();
+    }
+  }
+
   next() {
     if (this.page < this.maxPage) {
       this.page++;

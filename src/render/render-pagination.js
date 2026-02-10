@@ -32,7 +32,7 @@ export function renderPagination(curPage, maxPage) {
     .join('');
 
   if (curPage < maxPage - 2) {
-    markup += '<li class="pagination-page-number">...</li>';
+    markup += '<li class="pagination-continues">...</li>';
   }
 
   paginationPagesList.innerHTML = markup;
