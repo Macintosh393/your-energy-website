@@ -19,6 +19,11 @@ export default class Pagination {
       } else {
         this.perPage = 9;
       }
+    } else if (
+      this.purpose === 'favorites' &&
+      window.matchMedia('(min-width: 1440px)').matches
+    ) {
+      this.perPage = 200;
     } else if (this.purpose === 'exercises' || 'favorites') {
       if (window.matchMedia('(min-width: 768px)').matches) {
         this.perPage = 10;

@@ -1,3 +1,4 @@
+const paginationDiv = document.querySelector('.pagination');
 const paginationPagesList = document.querySelector('.pagination-pages');
 const paginationBackButtons = document.querySelector(
   '.pagination-back-wrapper'
@@ -8,13 +9,9 @@ const paginationNextButtons = document.querySelector(
 
 export function renderPagination(curPage, maxPage) {
   if (maxPage === 1) {
-    paginationPagesList.style.visibility = 'hidden';
-    paginationBackButtons.style.visibility = 'hidden';
-    paginationNextButtons.style.visibility = 'hidden';
+    paginationDiv.style.display = 'none';
   } else {
-    paginationPagesList.style.visibility = 'visible';
-    paginationBackButtons.style.visibility = 'visible';
-    paginationNextButtons.style.visibility = 'visible';
+    paginationDiv.style.display = 'flex';
   }
 
   if (curPage === 1) {

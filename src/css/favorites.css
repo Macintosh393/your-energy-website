@@ -1,7 +1,6 @@
 .favorites {
   padding: 0 20px;
   margin-top: 132px;
-  min-height: 80vh;
   margin-bottom: 100px;
 
   .favorites-wrapper {
@@ -150,6 +149,10 @@
     #main-content {
       order: 2;
       margin-top: 0;
+
+      height: 487px;
+      overflow-y: scroll;
+      scrollbar-color: #242424 transparent;
     }
 
     .favorites-wrapper {

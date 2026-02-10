@@ -19,6 +19,12 @@ body {
   flex-direction: column;
   min-width: 100%;
   min-height: 100vh;
+
+  scrollbar-color: #242424 transparent;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body.modal-open {
