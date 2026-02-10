@@ -151,7 +151,13 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .favorites {
+    .exercise-line-wrapper {
+      max-width: 373px;
+    }
+  }
+
   .exercise-line-wrapper {
-    max-width: 373px;
+    max-width: 410px;
   }
 }
