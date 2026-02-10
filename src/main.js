@@ -9,10 +9,10 @@ import { setQuote } from './utility/set-quote.js';
 import { addSubscriptionFormHandler } from './handlers/subscription-form-handler.js';
 import { addSearchHandler } from './handlers/search-handler.js';
 import { addExerciseDetailsHandler } from './handlers/exercise-details-handler.js';
-import { addModalHandlers } from './handlers/modal-handler.js';
-import { addFavoritesButtonsHandlers } from './handlers/favorites-buttons-handler.js';
 import { renderFavorites } from './render/render-favorites.js';
 import { getFavorites } from './handlers/favorites-handler.js';
+
+localStorage.clear();
 
 function initNavigation() {
   let url = window.location;
