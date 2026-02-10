@@ -49,7 +49,8 @@ export function addModalHandlers() {
       const review = form.querySelector('#rating-review-text').value;
       const req = { rate, email, review };
 
-      if (!isValidEmail(email)) throw new Error('Invalid Error');
+      if (!isValidEmail(email)) throw new Error('Invalid email');
+      if (rate == 0) throw new Error("Rating can't be 0");
 
       patchReview(form.dataset.id, req);
       modalBackdrop.classList.add('is-hidden');
