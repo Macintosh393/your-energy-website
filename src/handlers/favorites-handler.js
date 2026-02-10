@@ -14,9 +14,7 @@ export function getFavorites() {
 export async function putFavorite(newExerciseId) {
   const ex = await getExercise(newExerciseId);
   const favorites = getFavorites();
-  console.log(favorites);
   const newFavorites = JSON.stringify([...favorites, ex]);
-  console.log(newFavorites);
   localStorage.setItem('favorites', newFavorites);
   putCache(newExerciseId);
 }

@@ -12,7 +12,7 @@ export function addFavoritesButtonsHandlers() {
       putFavorite(exerciseId);
       const removeButtonHTML = `
         <button type="button" class="remove-from-favorites-btn" aria-label="Remove from favorites" data-id="${exerciseId}">
-            Remove from favorites
+            Remove from
             <svg class="bin-icon" width="20" height="20">
                 <use href="button-icons/delete.svg"></use>
             </svg>
