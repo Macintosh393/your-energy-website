@@ -7,6 +7,16 @@ const paginationNextButtons = document.querySelector(
 );
 
 export function renderPagination(curPage, maxPage) {
+  if (maxPage === 1) {
+    paginationPagesList.style.visibility = 'hidden';
+    paginationBackButtons.style.visibility = 'hidden';
+    paginationNextButtons.style.visibility = 'hidden';
+  } else {
+    paginationPagesList.style.visibility = 'visible';
+    paginationBackButtons.style.visibility = 'visible';
+    paginationNextButtons.style.visibility = 'visible';
+  }
+
   if (curPage === 1) {
     paginationBackButtons.style.opacity = '20%';
   } else {
