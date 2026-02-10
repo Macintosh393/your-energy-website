@@ -12,9 +12,8 @@ export function getFavorites() {
 }
 
 export async function putFavorite(newExerciseId) {
-  const ex = await getExercise(newExerciseId);
   const favorites = getFavorites();
-  const newFavorites = JSON.stringify([...favorites, ex]);
+  const newFavorites = JSON.stringify([...favorites, newExerciseId]);
   localStorage.setItem('favorites', newFavorites);
   putCache(newExerciseId);
 }
@@ -22,7 +21,7 @@ export async function putFavorite(newExerciseId) {
 export function removeFavorite(exerciseId) {
   const favorites = getFavorites();
   const newFavorites = JSON.stringify(
-    favorites.filter(item => item._id != exerciseId)
+    favorites.filter(item => item != exerciseId)
   );
   localStorage.setItem('favorites', newFavorites);
   popCache(exerciseId);
@@ -37,7 +36,7 @@ export function isFavorite(exerciseId) {
 }
 
 function rebuildCache() {
-  cacheFavoriteIds = new Set(getFavorites().map(item => item._id));
+  cacheFavoriteIds = new Set(getFavorites());
 }
 
 function putCache(exerciseId) {

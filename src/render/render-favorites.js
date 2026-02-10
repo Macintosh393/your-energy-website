@@ -1,13 +1,14 @@
 import { getFavorites } from '../handlers/favorites-handler';
 import { capitalize } from '../utility/capitalize';
 import { state } from '../state/state';
+import { getExercise } from '../api/your-energy-api';
 
 const favoriteList = document.querySelector('.favorite-exercises-list');
 const pagination = document.querySelector('.pagination');
 
-export function renderFavorites() {
-  const favoritExercises = getFavorites();
-  if (favoritExercises.length === 0) {
+export async function renderFavorites() {
+  const favoriteExercises = getFavorites();
+  if (favoriteExercises.length === 0) {
     favoriteList.innerHTML = `
     <li class="favorites-placeholder">
         It appears that you haven't added any exercises to your
@@ -19,12 +20,13 @@ export function renderFavorites() {
     return;
   }
 
-  favoriteList.innerHTML = favoritExercises
-    .slice(
-      (state.pagination.page - 1) * state.pagination.perPage,
-      state.pagination.page * state.pagination.perPage
-    )
-    .map(el => {
+  const start = (state.pagination.page - 1) * state.pagination.perPage;
+  const end = state.pagination.page * state.pagination.perPage;
+  const pageIds = favoriteExercises.slice(start, end);
+
+  const items = await Promise.all(
+    pageIds.map(async exerciseId => {
+      const el = await getExercise(exerciseId);
       return `
           <li class="exercise">
             <div class="exercise-line-wrapper">
@@ -58,5 +60,7 @@ export function renderFavorites() {
             </div>
           </li>`;
     })
-    .join('');
+  );
+
+  favoriteList.innerHTML = items.join('');
 }
