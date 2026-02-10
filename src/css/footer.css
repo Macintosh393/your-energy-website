@@ -1,5 +1,9 @@
 .footer {
   height: 590px;
+  display: flex;
+  justify-content: center;
+  padding-top: 45px;
+  padding-bottom: 10px;
 
   background-color: #242424;
   color: #fff;
@@ -8,8 +12,6 @@
 footer > .container {
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
-  padding-top: 30px;
   height: 100%;
 }
 
@@ -22,7 +24,6 @@ footer > .container {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  margin-top: 15px;
 }
 
 .footer-logo-icon {
@@ -133,16 +134,13 @@ footer > .container {
 @media screen and (min-width: 768px) {
   .footer {
     height: 534px;
-  }
-
-  .footer > .container {
-    padding: 20px 32px;
+    padding-top: 64px;
+    padding-bottom: 16px;
   }
 
   .footer-wrapper {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 40px;
   }
 
   .footer-links {

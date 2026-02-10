@@ -1,7 +1,8 @@
 .favorites {
-  padding: 0 20px;
-  margin-top: 132px;
-  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  padding-top: 132px;
+  padding-bottom: 100px;
 
   .favorites-wrapper {
     display: flex;
@@ -55,7 +56,7 @@
     margin-top: 20px;
   }
 
-  #main-content > .container {
+  #main-content > .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,16 +83,13 @@
 
 @media screen and (min-width: 768px) {
   .favorites {
-    padding: 0 32px;
-    max-width: 768px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 176px;
 
     .favorites-wrapper {
       gap: 54px;
     }
 
-    .motivation > .container {
+    .motivation > .wrapper {
       gap: 16px;
     }
 
@@ -139,9 +137,7 @@
 
 @media screen and (min-width: 1440px) {
   .favorites {
-    max-width: 1440px;
-
-    .motivation > .container {
+    .motivation > .wrapper {
       order: 1;
       width: 494px;
     }
@@ -175,10 +171,6 @@
 
     .favorites-placeholder {
       margin-top: 84px;
-    }
-
-    .exercise {
-      max-width: 405px;
     }
   }
 }

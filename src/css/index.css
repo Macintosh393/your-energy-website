@@ -1,6 +1,7 @@
 .hero {
-  margin-top: 132px;
-  padding: 0 20px;
+  padding-top: 132px;
+  display: flex;
+  justify-content: center;
 }
 
 .hero > .container {
@@ -77,16 +78,10 @@
 }
 
 main {
-  padding: 0 20px;
   display: flex;
   justify-content: center;
-  margin-top: 64px;
-  margin-bottom: 80px;
-}
-
-main > .container {
-  width: 100%;
-  max-width: 335px;
+  padding-top: 64px;
+  padding-bottom: 80px;
 }
 
 .main-heading-wrapper {
@@ -113,6 +108,7 @@ main > .container {
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 80px;
 }
 
 .exercises-nav {
@@ -203,7 +199,7 @@ main > .container {
   order: 2;
 }
 
-.motivation > .container {
+.motivation > .wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -366,7 +362,6 @@ main > .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 80px;
   width: 100%;
 }
 
@@ -394,7 +389,7 @@ main > .container {
   position: relative;
 
   width: 100%;
-  max-width: 335px;
+  max-width: 100%;
   height: 225px;
   overflow: hidden;
   padding: 20px;
@@ -437,8 +432,7 @@ main > .container {
 @media screen and (min-width: 768px) {
   /* Hero */
   .hero {
-    margin-top: 176px;
-    padding: 0 32px;
+    padding-top: 176px;
   }
 
   .hero-icon-wrapper {
@@ -474,13 +468,11 @@ main > .container {
 
   /* Main */
   main {
-    margin-bottom: 100px;
-    padding-left: 32px;
-    padding-right: 31px;
+    padding-bottom: 100px;
   }
 
-  main > .container {
-    max-width: 705px;
+  .main-order-wrapper {
+    gap: 64px;
   }
 
   .main-heading {
@@ -499,6 +491,8 @@ main > .container {
   }
 
   .filter-tabs-list {
+    margin: 0;
+    height: 48.39px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -523,12 +517,11 @@ main > .container {
   }
 
   .filter-tile {
-    max-width: 225px;
-    flex-grow: 1;
+    flex-basis: calc((100% - 30px) / 3);
   }
 
   /* Motivation */
-  .motivation > .container {
+  .motivation > .wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px 16px;
@@ -566,6 +559,8 @@ main > .container {
   .hero > .container {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 32px;
   }
 
   .hero-text-container {
@@ -579,6 +574,10 @@ main > .container {
     object-position: 50% 30%;
   }
 
+  .hero-subheading {
+    margin: 0;
+  }
+
   .hero-additional-container {
     display: flex;
     flex-direction: column;
@@ -587,8 +586,6 @@ main > .container {
     gap: 32px;
     order: 2;
     width: 200px;
-    margin-left: auto;
-    margin-bottom: 32px;
   }
 
   .tags-image {
@@ -601,8 +598,16 @@ main > .container {
   }
 
   /* Main */
-  main > .container {
-    max-width: 1377px;
+  .main-heading-wrapper {
+    margin-bottom: 0;
+  }
+
+  .exercises-navigation-wrapper {
+    margin-bottom: 32px;
+  }
+
+  main {
+    padding-bottom: 132px;
   }
 
   .exercises-navigation-wrapper {
@@ -617,10 +622,6 @@ main > .container {
     align-items: center;
   }
 
-  .filter-tabs-list {
-    margin: 7px 0;
-  }
-
   .main-order-wrapper {
     flex-direction: row;
     gap: 32px;
@@ -631,7 +632,6 @@ main > .container {
   }
 
   .filter-tile {
-    max-width: 290px;
     height: 242px;
   }
 
@@ -640,7 +640,7 @@ main > .container {
     order: 1;
   }
 
-  .motivation > .container {
+  .motivation > .wrapper {
     width: 444px;
   }
 
